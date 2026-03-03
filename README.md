@@ -42,7 +42,7 @@ The site uses relative paths (`./css/...`, `./js/...`, `./assets/...`) so it wor
 If you need GitLab Pages for a private GitHub source workflow:
 
 1. Mirror this repo to GitLab.
-2. Add a `.gitlab-ci.yml` Pages job that publishes the repo root.
+2. This repo already includes `.gitlab-ci.yml` with a Pages job.
 3. Ensure `index.html` is at the published root.
 
 ## How To Change Content
