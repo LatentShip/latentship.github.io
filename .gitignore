@@ -1,0 +1,11 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+*.sw?
+
+# Local tooling / caches
+.vscode/*
+!.vscode/extensions.json
+.cache/
+node_modules/
