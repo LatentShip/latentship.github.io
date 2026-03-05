@@ -41,11 +41,30 @@ Page URLs locally (with static server):
 
 ## Deploy to GitHub Pages
 
-1. Push to a GitHub repo.
-2. Go to `Settings -> Pages`.
-3. Set `Source` to `GitHub Actions`.
-4. Push to `main`.
-5. Workflow `Deploy Static Site` publishes automatically.
+Recommended repo name (best URL):
+
+- `latentship.github.io` -> site URL: `https://latentship.github.io/`
+
+Alternative repo name:
+
+- any name (example: `agency-portfolio-website`) -> site URL:
+  `https://latentship.github.io/<repo-name>/`
+
+One-time steps:
+
+1. Create a new GitHub repo in your org (`Public` visibility recommended for easiest Pages setup).
+2. From this project root, run:
+
+   ```powershell
+   .\scripts\publish-github-pages.ps1 -Org "LatentShip" -Repo "latentship.github.io"
+   ```
+
+3. In GitHub repo settings, go to `Settings -> Pages`.
+4. Set `Source` to `GitHub Actions`.
+5. Wait for the `Deploy Static Site` workflow on `main` to finish.
+6. Open your live URL.
+
+After this, every push to `main` auto-deploys.
 
 The site uses relative paths (`./`, `../`, `../../`) so it works from a repo subpath (project Pages URLs).
 
@@ -96,3 +115,4 @@ When adding a new project:
 
 - This is vanilla HTML/CSS/JS only.
 - Navigation is true multi-page (not single-page anchors for About/Work/Get Started).
+- Push the full repo root contents (all pages + `assets/`, `css/`, `js/`, and `.github/workflows/deploy-pages.yml`).

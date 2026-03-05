@@ -8,7 +8,7 @@
       name="description"
       content="Boutique product and engineering team translating business needs into scoped POCs, hardened MVPs, and launch-ready products."
     />
-    <title>Latent Foundry | Home</title>
+    <title>LatentShip | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,16 +21,20 @@
     <header class="site-header" id="top">
       <div class="container nav-shell">
         <a href="./" class="brand">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span class="brand-text">Latent Foundry</span>
+          <svg class="brand-mark" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+            <circle cx="14" cy="14" r="13" fill="#eef7e2" stroke="#b6d98a" />
+            <path d="M16.7 6.9c-2.6.6-4.7 2.7-5.3 5.3l-2.8 2.8 2.4 2.4 2.8-2.8c2.6-.6 4.7-2.7 5.3-5.3l.5-2.2-2.2.5Z" fill="#79ba37" />
+            <circle cx="15.8" cy="10.4" r="1.2" fill="#0f1518" />
+            <path d="M9.2 17.4 8 20l2.6-1.2z" fill="#5f9b2f" />
+          </svg>
+          <span class="brand-text">LatentShip</span>
         </a>
         <nav class="nav-links" aria-label="Primary">
           <a href="./" class="active">Home</a>
-          <a href="./about/">About Us</a>
           <a href="./work/">Our Work</a>
-          <a href="./#faq">FAQ</a>
+          <a href="./about/">About Us</a>
         </nav>
-        <a href="./get-started/" class="nav-cta">Get started</a>
+        <a href="./get-started/" class="nav-cta" data-track="cta_primary">Book a 15-min scoping call</a>
       </div>
     </header>
 
@@ -39,14 +43,20 @@
         <div class="container hero-grid">
           <div class="hero-copy panel" data-reveal>
             <p class="eyebrow" id="hero-eyebrow"></p>
+            <p class="hero-qualifier" id="hero-qualifier"></p>
             <h1 id="hero-title"></h1>
             <p class="subtitle" id="hero-subtitle"></p>
-            <a href="./get-started/" class="primary-cta">Book a free call -></a>
+            <ul id="hero-bullets" class="hero-bullets"></ul>
+            <div class="hero-actions">
+              <a href="./get-started/" class="primary-cta" data-track="cta_primary">Book a 15-min scoping call -></a>
+              <a href="./work/" class="secondary-cta" data-track="cta_secondary">See recent builds</a>
+            </div>
           </div>
 
           <aside class="hero-card panel panel-dark" data-reveal>
             <p class="meta" id="hero-card-meta"></p>
             <h2 id="hero-card-title"></h2>
+            <ul id="hero-timeline" class="hero-timeline"></ul>
             <div class="bars" aria-hidden="true">
               <span class="bar b1"></span>
               <span class="bar b2"></span>
@@ -56,8 +66,15 @@
         </div>
       </section>
 
+      <section class="section section-tight">
+        <div class="container proof-strip panel" data-reveal>
+          <p id="proof-title"></p>
+          <div id="proof-badges" class="proof-badges"></div>
+        </div>
+      </section>
+
       <section class="section" id="why-us">
-        <div class="container panel" data-reveal>
+        <div class="container panel why-panel" data-reveal>
           <div class="section-head">
             <p class="eyebrow">Why us</p>
             <h2>Short, concrete reasons teams trust us.</h2>
@@ -72,8 +89,14 @@
             <p class="eyebrow">Delivery roadmap</p>
             <h2 id="roadmap-title"></h2>
             <p class="lead" id="roadmap-subtitle"></p>
+            <p class="collab-note" id="roadmap-collaboration"></p>
           </div>
-          <div id="roadmap-steps" class="roadmap-grid"></div>
+          <div class="roadmap-stage">
+            <div class="stage-top">
+              <span class="slot-note" id="roadmap-stage-note"></span>
+            </div>
+            <div id="roadmap-steps" class="roadmap-grid timeline-grid"></div>
+          </div>
           <div id="trust-cards" class="trust-grid"></div>
         </div>
       </section>
@@ -82,22 +105,31 @@
         <div class="container" data-reveal>
           <div class="section-head inline-head">
             <div>
-              <p class="eyebrow">Featured work</p>
-              <h2>Recent builds</h2>
+              <p class="eyebrow">Recent builds</p>
+              <h2>Case snapshots with outcomes</h2>
             </div>
-            <a class="text-link-cta" href="./work/">View all projects -></a>
+            <a class="text-link-cta" href="./work/" data-track="cta_secondary">View all projects -></a>
           </div>
           <div id="featured-project-grid" class="project-grid" data-project-link-prefix="./work/"></div>
         </div>
       </section>
 
       <section class="section" id="faq">
-        <div class="container panel faq-panel" data-reveal>
-          <div class="section-head">
+        <div class="container panel faq-shell" data-reveal>
+          <div class="faq-left">
             <p class="eyebrow">FAQ</p>
             <h2>Common questions before we build.</h2>
+            <p class="lead">
+              Clear scope first, dependable build second, and practical post-launch support when needed.
+            </p>
+            <ul class="call-list">
+              <li>15-minute scope call</li>
+              <li>Fixed-scope POC planning</li>
+              <li>NDA-friendly process</li>
+            </ul>
+            <a href="./get-started/" class="text-link-cta" data-track="cta_secondary">Contact us -></a>
           </div>
-          <div id="faq-list" class="faq-list"></div>
+          <div id="faq-list" class="faq-list faq-right"></div>
         </div>
       </section>
     </main>
@@ -106,20 +138,20 @@
       <div class="container">
         <div class="footer-cta panel-dark" data-reveal>
           <h2>Ready to ship your next product?</h2>
-          <a href="mailto:hello@latentfoundry.com" class="footer-cta-link">hello@latentfoundry.com</a>
+          <a href="./get-started/" class="footer-cta-link" data-track="cta_primary">Book a 15-min scoping call</a>
+          <p class="footer-subline">Response within 1 business day.</p>
         </div>
         <div class="footer-grid panel" data-reveal>
           <div>
             <p class="footer-label">Company</p>
-            <p class="footer-brand">Latent Foundry</p>
+            <p class="footer-brand">LatentShip</p>
             <p class="footer-copy">
               Boutique product + engineering team focused on scoped delivery and practical outcomes.
             </p>
           </div>
           <div>
             <p class="footer-label">Contact</p>
-            <p>+1 (406) 555-0120</p>
-            <p>hello@latentfoundry.com</p>
+            <p>hello@latentship.com</p>
           </div>
           <div>
             <p class="footer-label">Model</p>
@@ -134,3 +166,4 @@
     <script src="./js/main.js" defer></script>
   </body>
 </html>
+

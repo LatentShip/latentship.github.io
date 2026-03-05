@@ -1,63 +1,99 @@
 window.SITE_CONTENT = {
   hero: {
     eyebrow: "Boutique product + engineering team",
+    qualifier: "For founders and product leaders building B2B SaaS and internal tools.",
     title: "From business problem to working product, fast.",
-    subtitle:
-      "We translate business needs into product and technical scope, then deliver: POC in ~7 days (scoped) -> MVP build (hardened tests/architecture) -> Launch + Iterate.",
+    subtitle: "We scope fast, build production-ready, and keep handoff clear.",
+    bullets: [
+      "Fixed-scope Proof of Concept in ~7 days",
+      "Production-ready MVP with tests, CI, and clean handoff"
+    ],
     cardMeta: "POC -> MVP -> Launch + Iterate",
-    cardTitle:
-      "Fast validation first, production-grade delivery next, then continuous improvement."
+    cardTitle: "Fast validation first, then production build with clear next steps.",
+    timeline: [
+      { label: "Week 1", text: "Proof of Concept (fixed scope)" },
+      { label: "Weeks 2+", text: "MVP build and hardening" },
+      { label: "Launch", text: "Release + iterate with data" }
+    ]
+  },
+  socialProof: {
+    title: "Built for operations-heavy products across:",
+    badges: ["B2B Operations", "EdTech", "FinTech", "Internal Tooling", "Coaching Platforms", "AgriTech"]
   },
   whyUs: [
-    "We map business goals to product and technical scope before writing code.",
-    "Scoped POC in ~7 days to reduce risk and validate direction early.",
-    "MVPs are built on maintainable architecture with hardened test coverage.",
-    "Cost-effective deployment plans aligned to your budget and stage.",
-    "No lock-in: you own the full source code and can continue anywhere.",
-    "Optional retainer support after launch for steady iteration."
+    {
+      title: "Business-first scope",
+      detail: "We map goals, constraints, and success criteria before writing code."
+    },
+    {
+      title: "7-day POC first",
+      detail: "A fixed-scope Proof of Concept reduces risk before larger build spend."
+    },
+    {
+      title: "Production-ready delivery",
+      detail: "MVPs include tests, CI, and maintainable architecture from day one."
+    },
+    {
+      title: "Budget-aligned choices",
+      detail: "Scope and deployment decisions are designed to fit your stage."
+    },
+    {
+      title: "No lock-in",
+      detail: "You own the repo, source code, and handoff documentation."
+    },
+    {
+      title: "Optional retainer",
+      detail: "Continue with us post-launch or transition to your internal team."
+    }
   ],
   roadmap: {
     title: "POC first, production build next, then continuous iteration.",
     subtitle:
       "We solve product problems with technical clarity, translating business priorities into scoped delivery your team can trust.",
+    collaboration:
+      "Weekly demos, shared Slack channel, and clear acceptance criteria at each phase.",
+    stageNote: "Typical MVP build: 3-6 weeks (depends on scope and integrations)",
     steps: [
       {
         phase: "Step 1",
         title: "POC in ~7 Days (Scoped)",
+        timeline: "~1 week",
         detail:
-          "We define the critical flow, constraints, and success criteria, then deliver a working proof to validate direction quickly."
+          "We define the critical flow, constraints, and success criteria, then deliver a working proof to validate direction quickly.",
+        deliverables: ["Scope doc", "Working proof", "Go/no-go recommendation"]
       },
       {
         phase: "Step 2",
         title: "MVP Build (Hardened)",
+        timeline: "Typical 3-6 weeks",
         detail:
-          "We convert validated scope into a production MVP with maintainable architecture, hardened tests, and clean handoff foundations."
+          "We convert validated scope into a production MVP with maintainable architecture, hardened tests, and clean handoff foundations.",
+        deliverables: ["Core product flows", "Testing + CI baseline", "Deployment-ready stack"]
       },
       {
         phase: "Step 3",
         title: "Launch + Iterate",
+        timeline: "Ongoing",
         detail:
-          "We launch with QA and monitoring, then prioritize improvements from real usage data. Optional retainer support is available."
+          "We launch with QA and monitoring, then prioritize improvements from real usage data. Optional retainer support is available.",
+        deliverables: ["Release support", "Feedback loop", "Prioritized iteration backlog"]
       }
     ],
     trustCards: [
       {
-        label: "Pricing Fit",
-        heading: "Budget Aligned",
-        copy:
-          "Cost-effective delivery and deployment choices matched to your stage and constraints."
+        label: "Low-risk POC offer",
+        heading: "POC from $0-$500",
+        copy: "For narrow validation flows, we can start with a lightweight mock-backend proof before full build."
       },
       {
-        label: "Code Ownership",
-        heading: "No Lock-In",
-        copy:
-          "You receive source code and handoff assets, so your team can continue anywhere."
+        label: "Collaboration model",
+        heading: "Clear Operating Rhythm",
+        copy: "Weekly demos, shared Slack, and tracked decisions with explicit acceptance criteria."
       },
       {
-        label: "After Launch",
-        heading: "Optional Retainer",
-        copy:
-          "Keep us involved for ongoing iteration, or run internally with your own team."
+        label: "Handoff package",
+        heading: "Production Handoff",
+        copy: "Repo ownership, runbooks, architecture notes, and a practical transition plan."
       }
     ]
   },
@@ -70,6 +106,9 @@ window.SITE_CONTENT = {
         "B2B procurement platform with quote workflows, approvals, and WhatsApp-led vendor coordination.",
       detail:
         "A procurement operations build focused on reducing lead-time across vendor requests, approvals, and order movement.",
+      whatWeDid: ["Workflow design for quote-to-order", "Approval engine and operations dashboard"],
+      outcome: "Faster quote-to-order flow with fewer manual follow-ups.",
+      posterLine: "Reduced procurement cycle friction",
       duration: "8 weeks",
       tags: ["B2B", "Procurement", "Operations"],
       deliverables: [
@@ -87,6 +126,9 @@ window.SITE_CONTENT = {
         "Learning operations platform for cohorts, mentors, and progress tracking with role-based workspaces.",
       detail:
         "A learning platform built around mentor workflows, cohort visibility, and practical reporting for operations teams.",
+      whatWeDid: ["Role-based workspaces for cohorts", "Learning ops dashboard and reporting flows"],
+      outcome: "Clearer cohort visibility and lower admin overhead for operations.",
+      posterLine: "Improved cohort visibility for operators",
       duration: "6 weeks",
       tags: ["EdTech", "SaaS", "Operations"],
       deliverables: [
@@ -104,6 +146,9 @@ window.SITE_CONTENT = {
         "Leadership development experience with reflection capture, coaching loops, and insight summaries.",
       detail:
         "A reflection and coaching platform designed for recurring sessions, qualitative feedback, and leadership growth tracking.",
+      whatWeDid: ["Session workflow and reflection timeline", "Insight summaries for coaches and leaders"],
+      outcome: "Improved coaching continuity across sessions and stakeholders.",
+      posterLine: "Stronger coaching continuity",
       duration: "7 weeks",
       tags: ["Coaching", "AI", "Leadership"],
       deliverables: [
@@ -121,6 +166,9 @@ window.SITE_CONTENT = {
         "Real-time market monitoring dashboard for precious metals with pricing feeds and alerting.",
       detail:
         "A monitoring dashboard for commodity decision-makers requiring live price updates, alerts, and historical context.",
+      whatWeDid: ["Realtime pricing feed handling", "Watchlist alerts and historical comparisons"],
+      outcome: "Quicker market response decisions with centralized visibility.",
+      posterLine: "Faster response to market movement",
       duration: "5 weeks",
       tags: ["FinTech", "Realtime", "Dashboards"],
       deliverables: [
@@ -138,6 +186,9 @@ window.SITE_CONTENT = {
         "Geo-aware campaign prototype for engagement and reward validation across field locations.",
       detail:
         "A location-aware engagement prototype validating incentives, redemption logic, and campaign controls before scale.",
+      whatWeDid: ["Geo check-in and validation logic", "Reward controls and campaign tooling"],
+      outcome: "Validated field reward mechanics before production rollout.",
+      posterLine: "Validated rewards before scale",
       duration: "4 weeks",
       tags: ["AgriTech", "Geo", "MVP"],
       deliverables: [
@@ -155,6 +206,9 @@ window.SITE_CONTENT = {
         "Internal support tool to triage incoming tickets and suggest response drafts for operations teams.",
       detail:
         "An internal support workflow improving triage speed and response consistency for cross-functional teams.",
+      whatWeDid: ["Ticket triage queue and prioritization", "Draft assistant and support performance panel"],
+      outcome: "Reduced ticket handling time and improved response consistency.",
+      posterLine: "Reduced support handling time",
       duration: "5 weeks",
       tags: ["SaaS", "Automation", "AI"],
       deliverables: [
@@ -173,23 +227,47 @@ window.SITE_CONTENT = {
   faq: [
     {
       question: "What do I get?",
-      answer:
-        "You get a scoped POC, then a production MVP with hardened tests and architecture, plus launch support and an iteration plan."
+      bullets: [
+        "A fixed-scope Proof of Concept (~7 days)",
+        "An MVP plan with scope, timeline, and technical approach",
+        "Launch + iteration support with documented handoff"
+      ]
     },
     {
       question: "How does pricing work?",
-      answer:
-        "POC is fixed and scoped first. MVP is priced from validated requirements, with deployment decisions aligned to your budget."
+      bullets: [
+        "POC is fixed scope and fixed fee",
+        "MVP is estimated from validated requirements",
+        "Scope changes are explicit and approved before implementation"
+      ]
     },
     {
       question: "Do I keep the code?",
-      answer:
-        "Yes. You own the source code and handoff materials. There is no lock-in."
+      bullets: [
+        "Yes, you own the source code and repository",
+        "You keep architecture notes and handoff docs",
+        "You can continue with us or your internal team"
+      ]
     },
     {
       question: "What happens after POC?",
-      answer:
-        "We review what was validated, lock MVP scope, and move into production build. After launch, you can continue with optional retainer support."
+      bullets: [
+        "We review what was validated and what changed",
+        "We lock MVP scope and implementation plan",
+        "We move into build with weekly demos and clear acceptance criteria"
+      ]
+    },
+    {
+      question: "Do you sign NDAs?",
+      bullets: ["Yes, we can sign NDAs before discovery and scope review."]
+    },
+    {
+      question: "What does the 7-day POC include?",
+      bullets: [
+        "One critical user flow implemented end-to-end",
+        "Working prototype + technical recommendation",
+        "Clear next-step plan for production MVP"
+      ]
     }
   ]
 }
