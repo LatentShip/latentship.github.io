@@ -1,0 +1,7 @@
+name = "latentship-lead"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+routes = [
+  { pattern = "api.latentship.com", custom_domain = true }
+]

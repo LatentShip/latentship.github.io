@@ -225,7 +225,7 @@ window.SITE_CONTENT = {
     ]
   },
   leadForm: {
-    endpoint: "https://YOUR-SERVER-ENDPOINT/api/send-intake",
+    endpoint: "https://api.latentship.com",
     method: "POST",
     provider: "resend",
     source: "latentship-site"
