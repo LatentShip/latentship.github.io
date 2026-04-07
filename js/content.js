@@ -210,11 +210,11 @@ window.SITE_CONTENT = {
       "We turn messy workflows into AI-agentic products teams actually use. We map business friction into practical AI systems with clear UX, automation, and production-ready delivery.",
     founders: [
       {
-        name: "Hariharan Ragunathan",
+        name: "Hariharan Ragunathan", 
         role: "Product + Engineering",
         email: "hari@latentship.com",
         blurb:
-          ""
+          "I build products by deeply understanding customer problems and translating them into simple, useful, and impactful experiences"
       },
       {
         name: "Shayaz Pithawalla",
