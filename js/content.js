@@ -185,22 +185,22 @@ window.SITE_CONTENT = {
     },
     {
       slug: "rewards-poc",
-      title: "Rewards POC",
-      industry: "Prototype",
+      title: "Rewards & Loyalty Platform",
+      industry: "AgriTech",
       summary:
-        "Geo-aware rewards prototype for validating campaign logic, field engagement flows, and redemption controls before production rollout.",
+        "Rewards and loyalty platform for a large agri seed company, designed to drive field engagement with geo-aware validation, secure QR redemptions, and campaign control across dealer and farmer journeys.",
       detail:
-        "A lightweight prototype used to validate location-aware reward mechanics, campaign rules, and redemption workflows before scaling further.",
+        "Built a location-aware rewards experience for a large agri seed company to support campaign execution in the field, protect redemption flows, and give operators clearer control over loyalty mechanics.",
       whatWeDid: [
-        "Location-aware check-in and validation logic",
-        "Campaign rules and redemption flow prototyping",
-        "Quick operator controls for field testing"
+        "Geo-aware check-in and validation flows for field activity",
+        "QR-based reward journeys with campaign and redemption controls",
+        "Operator tooling for campaign visibility and audit-ready tracking"
       ],
-      outcome: "Validated campaign mechanics before committing to full production build.",
-      posterLine: "Validated location-aware reward logic",
+      outcome: "Established a clear path for a scalable loyalty program with stronger campaign governance, more reliable field validation, and tighter redemption control.",
+      posterLine: "Geo-aware rewards for field engagement",
       duration: "4 weeks",
-      tags: ["Prototype", "Operational Platforms"],
-      deliverables: ["Geo validation prototype", "Reward logic testing tools", "Campaign control proof"],
+      tags: ["AgriTech", "Operational Platforms"],
+      deliverables: ["Rewards and loyalty experience", "QR redemption and validation flows", "Campaign operations tooling"],
       preview: "linear-gradient(140deg, #101418 0%, #395a74 44%, #b4ed7a 100%)"
     }
   ],
