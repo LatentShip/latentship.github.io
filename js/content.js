@@ -184,23 +184,23 @@ window.SITE_CONTENT = {
       preview: "linear-gradient(140deg, #101012 0%, #3a3a55 42%, #9fd957 100%)"
     },
     {
-      slug: "rewards-poc",
-      title: "Rewards & Loyalty Platform",
+      slug: "rewards-loyalty-program",
+      title: "Rewards & Loyalty Program",
       industry: "AgriTech",
       summary:
-        "Rewards and loyalty platform for a large agri seed company, designed to drive field engagement with geo-aware validation, secure QR redemptions, and campaign control across dealer and farmer journeys.",
+        "Geo-aware rewards program and loyalty campaign, with field engagement flows and redemption controls for a large agri seeds business.",
       detail:
-        "Built a location-aware rewards experience for a large agri seed company to support campaign execution in the field, protect redemption flows, and give operators clearer control over loyalty mechanics.",
+        "Rewards and loyalty campaign for a large agri seeds business, built around field engagement journeys, location-aware validation, and stronger redemption controls across dealer and farmer touchpoints.",
       whatWeDid: [
-        "Geo-aware check-in and validation flows for field activity",
-        "QR-based reward journeys with campaign and redemption controls",
-        "Operator tooling for campaign visibility and audit-ready tracking"
+        "Location-aware check-in and validation logic",
+        "Campaign rules and redemption flow design",
+        "Field engagement flows across dealer and farmer journeys"
       ],
-      outcome: "Established a clear path for a scalable loyalty program with stronger campaign governance, more reliable field validation, and tighter redemption control.",
-      posterLine: "Geo-aware rewards for field engagement",
+      outcome: "Improved understanding of market penetration and customer loyalty through better visibility into engagement behavior and redemption patterns.",
+      posterLine: "Geo-aware rewards and loyalty campaign",
       duration: "4 weeks",
       tags: ["AgriTech", "Operational Platforms"],
-      deliverables: ["Rewards and loyalty experience", "QR redemption and validation flows", "Campaign operations tooling"],
+      deliverables: ["Rewards and loyalty campaign", "QR redemption and validation flows", "Campaign operations tooling"],
       preview: "linear-gradient(140deg, #101418 0%, #395a74 44%, #b4ed7a 100%)"
     }
   ],

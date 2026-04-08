@@ -4,7 +4,7 @@ $ErrorActionPreference = "Stop"
 
 $repoRoot = Split-Path -Parent $PSScriptRoot
 $sourceRoot = "C:\Users\gehar\Documents\Github\siriseeds-rewards\assets"
-$outputDir = Join-Path $repoRoot "assets\work\rewards-poc"
+$outputDir = Join-Path $repoRoot "assets\work\rewards-loyalty-program"
 $outputPath = Join-Path $outputDir "RewardsLoyalty_1.png"
 
 if (!(Test-Path $outputDir)) {
@@ -168,7 +168,7 @@ try {
   Fill-RoundedRect $graphics $chipBrush 690 156 144 34 17
   Draw-CenteredString $graphics "AgriTech Platform" $pillFont $chipTextBrush 690 156 144 34
 
-  $graphics.DrawString("Rewards and loyalty infrastructure for a large agri seed company.", $heroTitleFont, $whiteBrush, [System.Drawing.RectangleF]::new(690, 212, 700, 138))
+  $graphics.DrawString("Rewards and loyalty campaign.", $heroTitleFont, $whiteBrush, [System.Drawing.RectangleF]::new(690, 212, 700, 138))
   $graphics.DrawString("A field-focused rewards system spanning dealer onboarding, farmer engagement, geo-aware validation, and controlled QR redemption flows.", $heroBodyFont, $whiteBrush, [System.Drawing.RectangleF]::new(690, 352, 660, 74))
 
   $featureCards = @(
