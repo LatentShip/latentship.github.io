@@ -184,23 +184,23 @@ window.SITE_CONTENT = {
       preview: "linear-gradient(140deg, #101012 0%, #3a3a55 42%, #9fd957 100%)"
     },
     {
-      slug: "rewards-poc",
-      title: "Rewards POC",
-      industry: "Prototype",
+      slug: "rewards-loyalty-program",
+      title: "Rewards & Loyalty Program",
+      industry: "AgriTech",
       summary:
-        "Geo-aware rewards prototype for validating campaign logic, field engagement flows, and redemption controls before production rollout.",
+        "Geo-aware rewards program and loyalty campaign, with field engagement flows and redemption controls for a large agri seeds business.",
       detail:
-        "A lightweight prototype used to validate location-aware reward mechanics, campaign rules, and redemption workflows before scaling further.",
+        "Rewards and loyalty campaign for a large agri seeds business, built around field engagement journeys, location-aware validation, and stronger redemption controls across dealer and farmer touchpoints.",
       whatWeDid: [
         "Location-aware check-in and validation logic",
-        "Campaign rules and redemption flow prototyping",
-        "Quick operator controls for field testing"
+        "Campaign rules and redemption flow design",
+        "Field engagement flows across dealer and farmer journeys"
       ],
-      outcome: "Validated campaign mechanics before committing to full production build.",
-      posterLine: "Validated location-aware reward logic",
+      outcome: "Improved understanding of market penetration and customer loyalty through better visibility into engagement behavior and redemption patterns.",
+      posterLine: "Geo-aware rewards and loyalty campaign",
       duration: "4 weeks",
-      tags: ["Prototype", "Operational Platforms"],
-      deliverables: ["Geo validation prototype", "Reward logic testing tools", "Campaign control proof"],
+      tags: ["AgriTech", "Operational Platforms"],
+      deliverables: ["Rewards and loyalty campaign", "QR redemption and validation flows", "Campaign operations tooling"],
       preview: "linear-gradient(140deg, #101418 0%, #395a74 44%, #b4ed7a 100%)"
     }
   ],
