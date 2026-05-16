@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LatentShip — Website UI Kit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      color: #132019;
+      background:
+        radial-gradient(circle at 3% -4%, #e5f5d4 0%, transparent 38%),
+        radial-gradient(circle at 95% 5%, #dff2c7 0%, transparent 28%),
+        linear-gradient(180deg, #f8fcf4 0%, #f3f8f1 34%, #eff5eb 100%);
+      min-height: 100vh;
+    }
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Sora", "Plus Jakarta Sans", sans-serif;
+      letter-spacing: -0.03em;
+      line-height: 1.12;
+      text-wrap: balance;
+    }
+    p { margin: 0; }
+    a { color: inherit; }
+    button { font-family: inherit; }
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .roadmap-grid, .trust-grid, .project-grid, .footer-inner-grid { grid-template-columns: 1fr !important; }
+      .why-grid { grid-template-columns: 1fr 1fr !important; }
+      .faq-grid { grid-template-columns: 1fr !important; }
+      .nav-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="Nav.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="ProjectCard.jsx"></script>
+  <script type="text/babel" src="RoadmapSection.jsx"></script>
+  <script type="text/babel" src="Footer.jsx"></script>
+
+  <script type="text/babel">
+    /* ─── Why Us Section ─── */
+    const WHY_US = [
+      { title: 'AI where it helps', detail: 'We apply AI to concrete workflow bottlenecks, not generic demos.' },
+      { title: 'Human-in-the-loop', detail: 'Critical decisions stay visible with controllable prompts, guardrails, and review points.' },
+      { title: 'Production-minded architecture', detail: 'We build for maintainability, observability, and clean handoff from day one.' },
+      { title: 'Fast scoped validation', detail: 'A focused POC reduces risk before broader product investment.' },
+      { title: 'Clear ownership + handoff', detail: 'You keep repos and implementation context without lock-in.' },
+      { title: 'Workflow-first thinking', detail: 'We design around real operations, then layer automation where it creates leverage.' },
+    ];
+
+    const WhyUsSection = () => (
+      <section style={{ padding: '40px 0 64px' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+          <div style={{
+            border: '1px solid rgba(18,32,24,0.12)', borderRadius: 26,
+            background: 'color-mix(in srgb, white 70%, #eff8e8 30%)',
+            boxShadow: '0 20px 40px rgba(21,35,26,0.09)', padding: 32,
+          }}>
+            <div style={{ display: 'grid', gap: 8, marginBottom: 24 }}>
+              <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#3a6422' }}>Why us</p>
+              <h2 style={{ fontSize: 'clamp(28px,3.2vw,40px)' }}>Short, concrete reasons teams trust us.</h2>
+            </div>
+            <div className="why-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+              {WHY_US.map((w, i) => (
+                <div key={i} style={{ border: '1px solid rgba(18,32,24,0.12)', borderRadius: 18, background: '#fcfefb', padding: 20 }}>
+                  <h3 style={{ fontSize: 18, fontWeight: 700 }}>{w.title}</h3>
+                  <p style={{ marginTop: 10, fontSize: 13, color: '#3d4f44', fontWeight: 600, lineHeight: 1.55 }}>{w.detail}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    /* ─── Social Proof Strip ─── */
+    const ProofStrip = () => (
+      <section style={{ padding: '4px 0 20px' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+          <div style={{
+            border: '1px solid rgba(18,32,24,0.12)', borderRadius: 18,
+            background: 'color-mix(in srgb, white 70%, #eff8e8 30%)',
+            boxShadow: '0 10px 22px rgba(26,42,29,0.07)',
+            padding: '14px 18px', display: 'grid', gap: 10,
+          }}>
+            <p style={{ fontSize: 13, fontWeight: 800, color: '#223228' }}>Selected work across:</p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+              {['AI Systems', 'Agentic Workflows', 'Operational Platforms', 'FinTech', 'EdTech', 'Internal Tools'].map(b => (
+                <span key={b} style={{
+                  borderRadius: 999, border: '1px solid rgba(18,32,24,0.1)',
+                  background: 'color-mix(in srgb, white 82%, #edf8e3 18%)',
+                  padding: '5px 10px', fontSize: 11, fontWeight: 700, color: '#36493f',
+                }}>{b}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    /* ─── FAQ Section ─── */
+    const FAQ_ITEMS = [
+      { q: 'What do I get first?', bullets: ['A scoped intake and problem framing conversation', 'A focused POC plan for the highest-leverage workflow', 'A clear recommendation on whether to move into MVP build'] },
+      { q: 'How does pricing work?', bullets: ['POC is fixed scope with explicit success criteria', 'MVP is estimated after validation and technical scoping', 'Scope changes are documented before implementation'] },
+      { q: 'Do we keep the code and architecture?', bullets: ['Yes. You own the source code and repository', 'We provide architecture notes and handoff context', 'You can continue with us or with your internal team'] },
+      { q: 'Do you support AI-heavy workflows?', bullets: ['Yes, when AI materially improves the workflow', 'We prioritize controllability, diagnostics, and human review points', 'We avoid over-automating critical decisions without safeguards'] },
+      { q: 'Do you sign NDAs?', bullets: ['Yes, we can sign NDAs before discovery and scope review.'] },
+    ];
+
+    const FaqItem = ({ item }) => {
+      const [open, setOpen] = React.useState(false);
+      return (
+        <div style={{ borderBottom: '1px solid rgba(10,16,18,0.12)', background: open ? 'rgba(247,251,242,0.8)' : 'transparent', borderRadius: 4 }}>
+          <button onClick={() => setOpen(!open)}
+            style={{
+              width: '100%', textAlign: 'left', cursor: 'pointer', background: 'none', border: 'none',
+              fontWeight: 700, fontSize: 15, lineHeight: '24px', padding: '14px 36px 14px 0',
+              position: 'relative', color: '#132019', fontFamily: 'inherit',
+            }}>
+            {item.q}
+            <span style={{
+              position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)',
+              width: 26, height: 26, borderRadius: '50%', border: '1px solid rgba(10,16,18,0.2)',
+              background: open ? '#17251d' : '#f5f9f1', color: open ? '#f2f7f0' : '#2b3c32',
+              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+              fontSize: 18, fontWeight: 800, lineHeight: 1,
+            }}>{open ? '−' : '+'}</span>
+          </button>
+          {open && (
+            <ul style={{ margin: '0 0 14px', paddingLeft: 20, display: 'grid', gap: 8 }}>
+              {item.bullets.map((b, i) => <li key={i} style={{ color: '#3d4f44', fontSize: 13, maxWidth: '70ch' }}>{b}</li>)}
+            </ul>
+          )}
+        </div>
+      );
+    };
+
+    const FaqSection = ({ onNavigate }) => (
+      <section style={{ padding: '0 0 64px' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+          <div style={{
+            border: '1px solid rgba(18,32,24,0.12)', borderRadius: 26,
+            background: 'color-mix(in srgb, white 70%, #eff8e8 30%)',
+            boxShadow: '0 20px 40px rgba(21,35,26,0.09)', padding: 32,
+            display: 'grid', gridTemplateColumns: '0.95fr 1.25fr', gap: 40,
+          }} className="faq-grid">
+            <div>
+              <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#3a6422' }}>FAQ</p>
+              <h2 style={{ marginTop: 8, fontSize: 'clamp(28px,3vw,38px)' }}>Common questions before we build.</h2>
+              <p style={{ marginTop: 16, color: '#3d4f44', fontSize: 16, lineHeight: 1.62 }}>We keep intake lightweight, scope concrete, and implementation grounded in real user workflows.</p>
+              <ul style={{ margin: '20px 0 0', padding: 0, listStyle: 'none', display: 'grid', gap: 8 }}>
+                {['15-minute scope call', 'Practical AI workflow scoping', 'NDA-friendly process'].map((item, i) => (
+                  <li key={i} style={{ color: '#2e4036', fontSize: 13, paddingLeft: 16, position: 'relative' }}>
+                    <span style={{ position: 'absolute', left: 0, top: '0.52em', width: 8, height: 8, borderRadius: '50%', background: '#6fb23a', display: 'block' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a href="#" onClick={e => { e.preventDefault(); onNavigate('get-started'); }}
+                style={{ marginTop: 20, display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none', fontSize: 14, fontWeight: 800, color: '#213228' }}>
+                Contact us <ArrowIcon />
+              </a>
+            </div>
+            <div style={{ borderTop: '1px solid rgba(10,16,18,0.12)' }}>
+              {FAQ_ITEMS.map((item, i) => <FaqItem key={i} item={item} />)}
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+
+    /* ─── About Page ─── */
+    const AboutPage = () => {
+      const founders = [
+        { name: 'Hariharan Ragunathan', initials: 'HR', role: 'Product + Engineering', email: 'hari@latentship.com', blurb: 'I build products by deeply understanding customer problems and translating them into simple, useful, and impactful experiences.' },
+        { name: 'Shayaz Pithawalla', initials: 'SP', role: 'Engineering + Architecture', email: 'shayaz@latentship.com', blurb: 'I build AI-forward products focused on creative automation, agentic workflows, and open cloud infrastructure.' },
+      ];
+      return (
+        <section style={{ padding: '64px 0' }}>
+          <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+            <div style={{
+              border: '1px solid rgba(18,32,24,0.12)', borderRadius: 26,
+              background: 'color-mix(in srgb, white 70%, #eff8e8 30%)',
+              boxShadow: '0 20px 40px rgba(21,35,26,0.09)', padding: 32,
+            }}>
+              <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#3a6422' }}>About us</p>
+              <h1 style={{ marginTop: 10, fontSize: 'clamp(32px,4.5vw,50px)' }}>Small team. Senior execution. Practical outcomes.</h1>
+              <p style={{ marginTop: 16, color: '#3d4f44', fontSize: 16, lineHeight: 1.62, maxWidth: '70ch' }}>
+                We turn messy workflows into AI-agentic products teams actually use. We map business friction into practical AI systems with clear UX, automation, and production-ready delivery.
+              </p>
+              <div style={{ marginTop: 32, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                {founders.map((f, i) => (
+                  <div key={i} style={{ border: '1px solid rgba(18,32,24,0.12)', borderRadius: 18, background: '#fbfef9', padding: 20 }}>
+                    <div style={{
+                      width: 80, height: 80, borderRadius: 16,
+                      background: 'radial-gradient(circle at 25% 20%, #e9fad5 0%, transparent 40%), linear-gradient(145deg, #a8d76c 0%, #e7f5d0 55%, #748a5f 100%)',
+                      border: '1px solid rgba(35,49,30,0.14)',
+                      display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                      fontWeight: 800, letterSpacing: '0.04em', fontSize: 22, color: '#152110',
+                    }}>{f.initials}</div>
+                    <h3 style={{ marginTop: 14, fontSize: 18, fontWeight: 700 }}>{f.name}</h3>
+                    <p style={{ marginTop: 2, color: '#3d4f44', fontSize: 13 }}>{f.role} · <a href={`mailto:${f.email}`} style={{ color: '#3d4f44', textDecoration: 'none' }}>{f.email}</a></p>
+                    <p style={{ marginTop: 10, color: '#37454b', fontSize: 13, lineHeight: 1.55 }}>{f.blurb}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    /* ─── Work Page ─── */
+    const WorkPage = ({ onSelectProject }) => (
+      <section style={{ padding: '64px 0' }}>
+        <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+          <div style={{ display: 'grid', gap: 8, marginBottom: 8 }}>
+            <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#3a6422' }}>Recent builds</p>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 16 }}>
+              <h1 style={{ fontSize: 'clamp(32px,4.5vw,50px)' }}>Case snapshots with outcomes</h1>
+            </div>
+          </div>
+          <ProjectGrid onSelectProject={onSelectProject} />
+        </div>
+      </section>
+    );
+
+    /* ─── Get Started Page ─── */
+    const GetStartedPage = ({ onNavigate }) => {
+      const [step, setStep] = React.useState(1);
+      const [selected, setSelected] = React.useState('');
+      const [submitted, setSubmitted] = React.useState(false);
+      const options = [
+        'Automating internal ops workflows',
+        'Building a client-facing AI product',
+        'Replacing a manual process with AI agents',
+        'Exploring where AI fits in our stack',
+      ];
+      return (
+        <section style={{ padding: '64px 0' }}>
+          <div style={{ maxWidth: 840, margin: '0 auto', padding: '0 20px' }}>
+            <div style={{
+              border: '1px solid rgba(18,32,24,0.12)', borderRadius: 26,
+              background: 'color-mix(in srgb, white 70%, #eff8e8 30%)',
+              boxShadow: '0 20px 40px rgba(21,35,26,0.09)', padding: 32,
+            }}>
+              <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#3a6422' }}>Get started</p>
+              <h1 style={{ marginTop: 8, fontSize: 'clamp(28px,3.8vw,44px)' }}>Book a 15-min scoping call</h1>
+              {!submitted ? (
+                <div style={{ marginTop: 24 }}>
+                  <div style={{ border: '1px solid rgba(11,17,18,0.12)', borderRadius: 18, background: 'rgba(250,252,248,0.92)', padding: 20 }}>
+                    <div style={{ display: 'grid', gap: 8, marginBottom: 16 }}>
+                      <div style={{ width: '100%', height: 9, borderRadius: 999, overflow: 'hidden', background: '#e2ead7' }}>
+                        <div style={{ height: '100%', width: `${(step / 3) * 100}%`, borderRadius: 999, background: 'linear-gradient(90deg, #71af35, #98cf5b)', transition: 'width 220ms cubic-bezier(0.2,0.8,0.2,1)' }} />
+                      </div>
+                      <p style={{ fontSize: 12, fontWeight: 700, color: '#4d5b56' }}>Step {step} of 3</p>
+                    </div>
+                    {step === 1 && (
+                      <div>
+                        <h2 style={{ fontFamily: '"Sora",sans-serif', fontSize: 'clamp(24px,3vw,34px)', marginBottom: 16 }}>What are you trying to build?</h2>
+                        <div style={{ display: 'grid', gap: 8 }}>
+                          {options.map(o => (
+                            <div key={o} onClick={() => setSelected(o)}
+                              style={{ border: `1px solid ${selected === o ? '#77b83d' : 'rgba(10,16,18,0.15)'}`, borderRadius: 12, background: selected === o ? '#eef7e2' : '#f9fcf5', padding: '12px 14px', display: 'flex', gap: 10, alignItems: 'flex-start', cursor: 'pointer', transition: 'all 140ms cubic-bezier(0.2,0.8,0.2,1)' }}>
+                              <input type="radio" readOnly checked={selected === o} style={{ marginTop: 3, width: 17, height: 17, accentColor: '#5b9830', flexShrink: 0 }} />
+                              <span style={{ fontSize: 14, color: '#132019', fontWeight: 600 }}>{o}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {step === 2 && (
+                      <div>
+                        <h2 style={{ fontFamily: '"Sora",sans-serif', fontSize: 'clamp(24px,3vw,34px)', marginBottom: 16 }}>Tell us about the workflow</h2>
+                        <div style={{ display: 'grid', gap: 12 }}>
+                          <label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#354047', marginBottom: 6 }}>Describe the current process</label>
+                          <textarea style={{ width: '100%', borderRadius: 12, border: '1px solid rgba(10,16,18,0.16)', background: '#fdfefb', color: '#0f1518', fontFamily: 'inherit', fontSize: 15, padding: '9px 11px', resize: 'vertical', minHeight: 100, outline: 'none' }} placeholder="Walk us through the messy part..." />
+                        </div>
+                      </div>
+                    )}
+                    {step === 3 && (
+                      <div>
+                        <h2 style={{ fontFamily: '"Sora",sans-serif', fontSize: 'clamp(24px,3vw,34px)', marginBottom: 16 }}>Your contact details</h2>
+                        <div style={{ display: 'grid', gap: 12 }}>
+                          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+                            <div><label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#354047', marginBottom: 6 }}>Name</label><input style={{ width: '100%', borderRadius: 12, border: '1px solid rgba(10,16,18,0.16)', background: '#fdfefb', fontFamily: 'inherit', fontSize: 15, padding: '9px 11px', outline: 'none' }} placeholder="Your name" /></div>
+                            <div><label style={{ display: 'block', fontSize: 13, fontWeight: 700, color: '#354047', marginBottom: 6 }}>Email</label><input style={{ width: '100%', borderRadius: 12, border: '1px solid rgba(10,16,18,0.16)', background: '#fdfefb', fontFamily: 'inherit', fontSize: 15, padding: '9px 11px', outline: 'none' }} placeholder="you@company.com" /></div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                    <div style={{ marginTop: 16, display: 'flex', justifyContent: 'flex-end', gap: 10 }}>
+                      {step > 1 && (
+                        <button onClick={() => setStep(s => s - 1)} style={{ minHeight: 42, borderRadius: 999, padding: '10px 16px', fontSize: 13, fontWeight: 800, cursor: 'pointer', border: '1px solid rgba(11,17,18,0.2)', background: '#f7fbf2', color: '#24362c' }}>Back</button>
+                      )}
+                      <button
+                        onClick={() => step < 3 ? setStep(s => s + 1) : setSubmitted(true)}
+                        style={{ minHeight: 42, borderRadius: 999, padding: '10px 18px', fontSize: 13, fontWeight: 800, cursor: 'pointer', border: '1px solid #0f1416', background: '#0f1416', color: '#eff5eb' }}>
+                        {step === 3 ? 'Submit →' : 'Continue →'}
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div style={{ marginTop: 24, borderRadius: 18, border: '1px solid rgba(10,16,18,0.13)', background: '#f3fae8', padding: 24, display: 'grid', gap: 12 }}>
+                  <h2 style={{ fontFamily: '"Sora",sans-serif', fontSize: 'clamp(26px,3vw,34px)' }}>We'll be in touch shortly.</h2>
+                  <p style={{ color: '#3d4f44', fontSize: 15 }}>Response within 1 business day. We'll review your intake and reach out to confirm the call.</p>
+                  <a href="#" onClick={e => { e.preventDefault(); onNavigate('home'); }} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none', fontSize: 14, fontWeight: 800, color: '#213228' }}>
+                    Back to home <ArrowIcon />
+                  </a>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    /* ─── Project Detail Page ─── */
+    const ProjectDetailPage = ({ project, onBack }) => {
+      if (!project) return null;
+      return (
+        <section style={{ padding: '64px 0' }}>
+          <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+            <div style={{
+              border: '1px solid rgba(18,32,24,0.12)', borderRadius: 26,
+              background: 'color-mix(in srgb, white 70%, #eff8e8 30%)',
+              boxShadow: '0 20px 40px rgba(21,35,26,0.09)', padding: 32,
+            }}>
+              <a href="#" onClick={e => { e.preventDefault(); onBack(); }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none', fontSize: 11, fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', color: '#40652a' }}>
+                <ArrowIcon style={{ transform: 'rotate(180deg)', marginLeft: 0, marginRight: 6 }} /> Back to work
+              </a>
+              <p style={{ marginTop: 12, fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#66766d' }}>{project.industry}</p>
+              <h1 style={{ marginTop: 6, fontSize: 'clamp(32px,4vw,50px)' }}>{project.title}</h1>
+              <div style={{ marginTop: 24, display: 'grid', gridTemplateColumns: '1.08fr 0.92fr', gap: 16 }}>
+                <div style={{ minHeight: 300, borderRadius: 18, overflow: 'hidden', background: project.preview, position: 'relative' }}>
+                  {project.image && <img src={project.image} alt={project.title} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />}
+                </div>
+                <div style={{ border: '1px solid rgba(18,32,24,0.12)', borderRadius: 18, background: '#fbfef9', padding: 20 }}>
+                  <h2 style={{ fontSize: 'clamp(22px,2.5vw,30px)' }}>What we built</h2>
+                  <p style={{ marginTop: 10, color: '#3d4f44', fontSize: 14 }}>{project.duration} engagement</p>
+                  <h3 style={{ marginTop: 20, fontSize: 11, textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 800, color: '#6d7d73' }}>What we did</h3>
+                  <ul style={{ marginTop: 10, padding: 0, listStyle: 'none', display: 'grid', gap: 8 }}>
+                    {(project.whatWeDid || project.deliverables || []).map((d, i) => (
+                      <li key={i} style={{ border: '1px solid rgba(11,17,18,0.12)', borderRadius: 12, padding: 10, color: '#46564d', background: '#f5f9ef', fontSize: 13 }}>{d}</li>
+                    ))}
+                  </ul>
+                  <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                    {project.tags.map(t => <span key={t} style={{ border: '1px solid rgba(10,16,18,0.14)', borderRadius: 999, fontSize: 11, padding: '3px 8px', background: '#edf7e3', color: '#33483e', fontWeight: 700 }}>{t}</span>)}
+                  </div>
+                </div>
+              </div>
+              <p style={{ marginTop: 20, color: '#3d4f44', fontSize: 15, lineHeight: 1.62 }}>{project.detail || project.summary}</p>
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    /* ─── App Shell ─── */
+    const App = () => {
+      const [page, setPage] = React.useState('home');
+      const [selectedProject, setSelectedProject] = React.useState(null);
+
+      const navigate = (p) => {
+        setPage(p);
+        setSelectedProject(null);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      const selectProject = (project) => {
+        setSelectedProject(project);
+        setPage('project-detail');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      };
+
+      return (
+        <div>
+          <Nav activePage={page} onNavigate={navigate} />
+
+          {page === 'home' && (
+            <>
+              <Hero onNavigate={navigate} />
+              <ProofStrip />
+              <WhyUsSection />
+              <RoadmapSection />
+              <section style={{ padding: '0 0 64px' }}>
+                <div style={{ maxWidth: 1140, margin: '0 auto', padding: '0 20px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 16, marginBottom: 24 }}>
+                    <div>
+                      <p style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#3a6422', marginBottom: 6 }}>Recent builds</p>
+                      <h2 style={{ fontFamily: '"Sora",sans-serif', fontSize: 'clamp(28px,3.5vw,42px)', fontWeight: 700, lineHeight: 1.12, letterSpacing: '-0.03em' }}>Case snapshots with outcomes</h2>
+                    </div>
+                    <a href="#" onClick={e => { e.preventDefault(); navigate('work'); }}
+                      style={{ display: 'inline-flex', alignItems: 'center', gap: 6, textDecoration: 'none', fontSize: 14, fontWeight: 800, color: '#213228', whiteSpace: 'nowrap' }}>
+                      View all projects <ArrowIcon />
+                    </a>
+                  </div>
+                  <div className="project-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+                    {PROJECTS.slice(0, 3).map(p => <ProjectCard key={p.slug} project={p} onClick={selectProject} />)}
+                  </div>
+                </div>
+              </section>
+              <FaqSection onNavigate={navigate} />
+              <Footer onNavigate={navigate} />
+            </>
+          )}
+
+          {page === 'work' && (
+            <>
+              <WorkPage onSelectProject={selectProject} />
+              <Footer onNavigate={navigate} />
+            </>
+          )}
+
+          {page === 'about' && (
+            <>
+              <AboutPage />
+              <Footer onNavigate={navigate} />
+            </>
+          )}
+
+          {page === 'get-started' && (
+            <>
+              <GetStartedPage onNavigate={navigate} />
+              <Footer onNavigate={navigate} />
+            </>
+          )}
+
+          {page === 'project-detail' && (
+            <>
+              <ProjectDetailPage project={selectedProject} onBack={() => navigate('work')} />
+              <Footer onNavigate={navigate} />
+            </>
+          )}
+        </div>
+      );
+    };
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

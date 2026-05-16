@@ -1,0 +1,110 @@
+<!doctype html><html><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Sora:wght@700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:#f3f8f1;padding:24px;display:flex;flex-direction:column;gap:16px;}
+.row{display:flex;gap:20px;flex-wrap:wrap;align-items:center;}
+.section-label{font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#6d7d73;}
+.divider{height:1px;background:rgba(18,32,24,0.1);}
+.on-dark{background:radial-gradient(circle at 12% 12%,rgba(139,200,75,0.28) 0%,transparent 36%),linear-gradient(150deg,#152019 0%,#0f1813 55%,#111c16 100%);border-radius:14px;padding:16px 20px;display:inline-flex;align-items:center;gap:8px;}
+</style></head><body>
+
+<!--
+  Brand mark: user-provided rocket SVG (viewBox 0 0 24 24), recolored with LatentShip brand greens.
+  - Exhaust dot          → brand-700 #3a6422
+  - Body + fins group    → brand-500 #5b9830 (main), fin accents brand-400 #6fb23a, top accent brand-200 #79ba37
+  - Porthole             → white cutout (already in path)
+  Wrapped in brand circle on light/dark backgrounds.
+-->
+
+<!-- Hidden defs: light and dark rocket variants at 24×24 -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- LIGHT variant: brand greens on transparent bg (circle added by each usage svg) -->
+    <g id="rocket-light">
+      <!-- Exhaust smoke dot -->
+      <path d="M6.517,17.569c-1.157-1.145-3.364-.909-4.379,.121-1.132,1.149-1.008,3.87-.959,4.381,.046,.483,.432,.863,.916,.902,.13,.01,3.028,.294,4.356-1.019,.97-1.049,1.218-3.185,.066-4.386Z" fill="#3a6422"/>
+      <!-- Main body + porthole cutout -->
+      <path d="M18.196,15.759c6.363-6.464,4.385-13.443,4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552,4.372L3.631,10.436c-.63,.641-.9,1.553-.719,2.44,.175,.862,.755,1.576,1.557,1.908,1.154,.479,2.107,1.101,2.896,1.896,.768,.78,1.353,1.791,1.869,2.95,1.041,2.336,3.666,1.747,4.321,.844l4.641-4.715Zm-6.125-3.801l-.029-.029c-1.636-1.662-.703-3.106,0-3.82,.611-.62,2.095-1.71,3.805,0,1.649,1.649,.703,3.106,0,3.82-.61,.62-2.05,1.755-3.776,.029Z" fill="#5b9830"/>
+      <!-- Upper-left fin accent -->
+      <path d="M2.206,9.034L6.847,4.32c.45-.457,.904-.877,1.359-1.262-1.382-.48-2.856-.22-3.73,.192-1.688,.795-2.935,2.844-3.072,3.075-.075,.127-.121,.268-.135,.415-.021,.215-.129,1.627,.358,3.012,.167-.255,.36-.495,.578-.717Z" fill="#79ba37"/>
+      <!-- Lower-right fin accent -->
+      <path d="M20.638,19.608c.402-.881,.642-2.367,.172-3.762-.364,.44-.76,.88-1.189,1.316l-4.641,4.715c-.233,.237-.488,.445-.759,.624,1.365,.49,2.751,.386,2.964,.366,.151-.014,.298-.062,.428-.142,.227-.138,2.245-1.405,3.026-3.117Z" fill="#79ba37"/>
+    </g>
+    <!-- DARK variant: brighter greens for dark bg -->
+    <g id="rocket-dark">
+      <path d="M6.517,17.569c-1.157-1.145-3.364-.909-4.379,.121-1.132,1.149-1.008,3.87-.959,4.381,.046,.483,.432,.863,.916,.902,.13,.01,3.028,.294,4.356-1.019,.97-1.049,1.218-3.185,.066-4.386Z" fill="#4a7a2a"/>
+      <path d="M18.196,15.759c6.363-6.464,4.385-13.443,4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552,4.372L3.631,10.436c-.63,.641-.9,1.553-.719,2.44,.175,.862,.755,1.576,1.557,1.908,1.154,.479,2.107,1.101,2.896,1.896,.768,.78,1.353,1.791,1.869,2.95,1.041,2.336,3.666,1.747,4.321,.844l4.641-4.715Zm-6.125-3.801l-.029-.029c-1.636-1.662-.703-3.106,0-3.82,.611-.62,2.095-1.71,3.805,0,1.649,1.649,.703,3.106,0,3.82-.61,.62-2.05,1.755-3.776,.029Z" fill="#6fb23a"/>
+      <path d="M2.206,9.034L6.847,4.32c.45-.457,.904-.877,1.359-1.262-1.382-.48-2.856-.22-3.73,.192-1.688,.795-2.935,2.844-3.072,3.075-.075,.127-.121,.268-.135,.415-.021,.215-.129,1.627,.358,3.012,.167-.255,.36-.495,.578-.717Z" fill="#91c95d"/>
+      <path d="M20.638,19.608c.402-.881,.642-2.367,.172-3.762-.364,.44-.76,.88-1.189,1.316l-4.641,4.715c-.233,.237-.488,.445-.759,.624,1.365,.49,2.751,.386,2.964,.366,.151-.014,.298-.062,.428-.142,.227-.138,2.245-1.405,3.026-3.117Z" fill="#91c95d"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="section-label">Brand Mark — Full Lockup</div>
+<div class="row">
+  <!-- Light bg pill -->
+  <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 16px;background:color-mix(in srgb,white 84%,#eaf6de 16%);border-radius:999px;border:1px solid rgba(18,32,24,0.1);">
+    <svg width="26" height="26" viewBox="-2 -2 28 28" style="filter:drop-shadow(0 3px 8px rgba(70,130,25,0.22))">
+      <circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/>
+      <use href="#rocket-light"/>
+    </svg>
+    <span style="font-size:15px;font-weight:800;letter-spacing:0.02em;color:#132019;">LatentShip</span>
+  </div>
+  <!-- Dark bg pill -->
+  <div class="on-dark">
+    <svg width="26" height="26" viewBox="-2 -2 28 28" style="filter:drop-shadow(0 3px 10px rgba(90,152,48,0.4))">
+      <circle cx="12" cy="12" r="13.5" fill="#1c2e1e" stroke="rgba(144,203,83,0.32)" stroke-width="1.2"/>
+      <use href="#rocket-dark"/>
+    </svg>
+    <span style="font-size:15px;font-weight:800;letter-spacing:0.02em;color:#f4f8f2;">LatentShip</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+<div class="section-label">Mark Only — Sizes</div>
+<div class="row" style="align-items:center;gap:14px;">
+  <svg width="14" height="14" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/><use href="#rocket-light"/></svg>
+  <svg width="20" height="20" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/><use href="#rocket-light"/></svg>
+  <svg width="28" height="28" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/><use href="#rocket-light"/></svg>
+  <svg width="40" height="40" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/><use href="#rocket-light"/></svg>
+  <svg width="56" height="56" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/><use href="#rocket-light"/></svg>
+  <svg width="72" height="72" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#eef7e2" stroke="#b6d98a" stroke-width="1.2"/><use href="#rocket-light"/></svg>
+</div>
+
+<div class="divider"></div>
+<div class="section-label">On dark background</div>
+<div style="background:radial-gradient(circle at 12% 12%,rgba(139,200,75,0.28) 0%,transparent 36%),linear-gradient(150deg,#152019 0%,#0f1813 55%,#111c16 100%);border-radius:16px;padding:18px 20px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+  <svg width="40" height="40" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#1c2e1e" stroke="rgba(144,203,83,0.32)" stroke-width="1.2"/><use href="#rocket-dark"/></svg>
+  <svg width="56" height="56" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#1c2e1e" stroke="rgba(144,203,83,0.32)" stroke-width="1.2"/><use href="#rocket-dark"/></svg>
+  <div style="display:inline-flex;align-items:center;gap:8px;">
+    <svg width="26" height="26" viewBox="-2 -2 28 28"><circle cx="12" cy="12" r="13.5" fill="#1c2e1e" stroke="rgba(144,203,83,0.32)" stroke-width="1.2"/><use href="#rocket-dark"/></svg>
+    <span style="font-size:16px;font-weight:800;letter-spacing:0.02em;color:#f4f8f2;">LatentShip</span>
+  </div>
+</div>
+
+<div class="divider"></div>
+<div class="section-label">Rocket SVG — standalone (no circle, for flexible usage)</div>
+<div class="row" style="gap:16px;align-items:center;">
+  <svg width="48" height="48" viewBox="0 0 24 24">
+    <path d="M6.517,17.569c-1.157-1.145-3.364-.909-4.379,.121-1.132,1.149-1.008,3.87-.959,4.381,.046,.483,.432,.863,.916,.902,.13,.01,3.028,.294,4.356-1.019,.97-1.049,1.218-3.185,.066-4.386Z" fill="#3a6422"/>
+    <path d="M18.196,15.759c6.363-6.464,4.385-13.443,4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552,4.372L3.631,10.436c-.63,.641-.9,1.553-.719,2.44,.175,.862,.755,1.576,1.557,1.908,1.154,.479,2.107,1.101,2.896,1.896,.768,.78,1.353,1.791,1.869,2.95,1.041,2.336,3.666,1.747,4.321,.844l4.641-4.715Zm-6.125-3.801l-.029-.029c-1.636-1.662-.703-3.106,0-3.82,.611-.62,2.095-1.71,3.805,0,1.649,1.649,.703,3.106,0,3.82-.61,.62-2.05,1.755-3.776,.029Z" fill="#5b9830"/>
+    <path d="M2.206,9.034L6.847,4.32c.45-.457,.904-.877,1.359-1.262-1.382-.48-2.856-.22-3.73,.192-1.688,.795-2.935,2.844-3.072,3.075-.075,.127-.121,.268-.135,.415-.021,.215-.129,1.627,.358,3.012,.167-.255,.36-.495,.578-.717Z" fill="#79ba37"/>
+    <path d="M20.638,19.608c.402-.881,.642-2.367,.172-3.762-.364,.44-.76,.88-1.189,1.316l-4.641,4.715c-.233,.237-.488,.445-.759,.624,1.365,.49,2.751,.386,2.964,.366,.151-.014,.298-.062,.428-.142,.227-.138,2.245-1.405,3.026-3.117Z" fill="#79ba37"/>
+  </svg>
+  <svg width="64" height="64" viewBox="0 0 24 24">
+    <path d="M6.517,17.569c-1.157-1.145-3.364-.909-4.379,.121-1.132,1.149-1.008,3.87-.959,4.381,.046,.483,.432,.863,.916,.902,.13,.01,3.028,.294,4.356-1.019,.97-1.049,1.218-3.185,.066-4.386Z" fill="#3a6422"/>
+    <path d="M18.196,15.759c6.363-6.464,4.385-13.443,4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552,4.372L3.631,10.436c-.63,.641-.9,1.553-.719,2.44,.175,.862,.755,1.576,1.557,1.908,1.154,.479,2.107,1.101,2.896,1.896,.768,.78,1.353,1.791,1.869,2.95,1.041,2.336,3.666,1.747,4.321,.844l4.641-4.715Zm-6.125-3.801l-.029-.029c-1.636-1.662-.703-3.106,0-3.82,.611-.62,2.095-1.71,3.805,0,1.649,1.649,.703,3.106,0,3.82-.61,.62-2.05,1.755-3.776,.029Z" fill="#5b9830"/>
+    <path d="M2.206,9.034L6.847,4.32c.45-.457,.904-.877,1.359-1.262-1.382-.48-2.856-.22-3.73,.192-1.688,.795-2.935,2.844-3.072,3.075-.075,.127-.121,.268-.135,.415-.021,.215-.129,1.627,.358,3.012,.167-.255,.36-.495,.578-.717Z" fill="#79ba37"/>
+    <path d="M20.638,19.608c.402-.881,.642-2.367,.172-3.762-.364,.44-.76,.88-1.189,1.316l-4.641,4.715c-.233,.237-.488,.445-.759,.624,1.365,.49,2.751,.386,2.964,.366,.151-.014,.298-.062,.428-.142,.227-.138,2.245-1.405,3.026-3.117Z" fill="#79ba37"/>
+  </svg>
+  <div style="font-size:11px;color:#6d7d73;font-weight:700;max-width:160px;line-height:1.5;">Bare SVG — use on colored backgrounds or as icon without the circle container</div>
+</div>
+
+<div class="divider"></div>
+<div class="section-label">Arrow Icon (CSS mask — only repeating icon in system)</div>
+<div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+  <div style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:800;color:#132019;">CTA text <span style="display:inline-block;width:15px;height:15px;background:#132019;-webkit-mask-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M18 12a2 2 0 0 0-.59-1.4l-4.29-4.3a1 1 0 1 0-1.41 1.42L15 11H5a1 1 0 1 0 0 2h10l-3.29 3.29a1 1 0 1 0 1.41 1.42l4.29-4.3A2 2 0 0 0 18 12Z%22/%3E%3C/svg%3E');mask-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22%3E%3Cpath d=%22M18 12a2 2 0 0 0-.59-1.4l-4.29-4.3a1 1 0 1 0-1.41 1.42L15 11H5a1 1 0 1 0 0 2h10l-3.29 3.29a1 1 0 1 0 1.41 1.42l4.29-4.3A2 2 0 0 0 18 12Z%22/%3E%3C/svg%3E');-webkit-mask-size:contain;mask-size:contain;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;"></span></div>
+  <div style="font-size:11px;color:#6d7d73;font-weight:700;">17px · CSS mask · currentColor — all CTAs, text-links, back-links</div>
+</div>
+</body></html>

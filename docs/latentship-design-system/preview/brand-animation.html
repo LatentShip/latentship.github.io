@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:#f3f8f1;padding:20px;display:flex;flex-direction:column;gap:12px;}
+.section-label{font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#6d7d73;}
+.divider{height:1px;background:rgba(18,32,24,0.1);}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;}
+.demo-btn{text-decoration:none;border-radius:999px;min-height:38px;display:inline-flex;align-items:center;font-size:13px;font-weight:800;padding:0 14px;border:1px solid #0f1914;background:#14211a;color:#f7fbf5;cursor:pointer;transition:transform 220ms cubic-bezier(0.2,0.8,0.2,1),box-shadow 220ms cubic-bezier(0.2,0.8,0.2,1);}
+.demo-btn:hover{transform:translateY(-1px);box-shadow:0 20px 40px rgba(21,35,26,0.16);}
+.demo-btn:active{transform:translateY(1px) scale(0.99);}
+.card-demo{border:1px solid rgba(18,32,24,0.12);border-radius:18px;background:color-mix(in srgb,white 70%,#eff8e8 30%);box-shadow:0 10px 22px rgba(26,42,29,0.07);padding:14px 16px;cursor:pointer;transition:transform 220ms cubic-bezier(0.2,0.8,0.2,1),box-shadow 220ms cubic-bezier(0.2,0.8,0.2,1);font-size:13px;font-weight:700;color:#132019;}
+.card-demo:hover{transform:translateY(-3px);box-shadow:0 20px 34px rgba(19,33,24,0.13);}
+.reveal-demo{opacity:0;transform:translateY(14px);transition:opacity 420ms cubic-bezier(0.2,0.8,0.2,1),transform 420ms cubic-bezier(0.2,0.8,0.2,1);border:1px solid rgba(18,32,24,0.12);border-radius:12px;padding:10px 14px;background:#fbfef9;font-size:13px;color:#132019;font-weight:600;}
+.reveal-demo.visible{opacity:1;transform:translateY(0);}
+table{border-collapse:collapse;width:100%;}
+td{padding:5px 10px 5px 0;font-size:12px;color:#3d4f44;vertical-align:top;}
+td:first-child{font-weight:800;color:#132019;white-space:nowrap;min-width:90px;}
+</style>
+<script>
+window.addEventListener('DOMContentLoaded',()=>{
+  setTimeout(()=>{document.querySelectorAll('.reveal-demo').forEach(el=>el.classList.add('visible'))},300);
+});
+</script>
+</head><body>
+<div class="section-label">Easing & Timing Tokens</div>
+<table>
+  <tr><td>ease-out</td><td>cubic-bezier(0.2, 0.8, 0.2, 1) — smooth decelerate, never bouncy</td></tr>
+  <tr><td>fast</td><td>140ms — color, opacity, border-color</td></tr>
+  <tr><td>normal</td><td>220ms — transforms (lift, scale, translate)</td></tr>
+  <tr><td>reveal</td><td>420ms — scroll-in fade-up (opacity + translateY)</td></tr>
+</table>
+<div class="divider"></div>
+<div class="section-label">Hover — Button lift (hover me)</div>
+<div class="row">
+  <div class="demo-btn">Book a 15-min scoping call</div>
+  <div style="font-size:11px;color:#6d7d73;">translateY(-1px) on hover · translateY(1px) scale(0.99) on press</div>
+</div>
+<div class="divider"></div>
+<div class="section-label">Hover — Card lift (hover me)</div>
+<div class="card-demo">AlgoBullion — Live pricing + trading desk control</div>
+<div class="divider"></div>
+<div class="section-label">Scroll Reveal (auto-plays)</div>
+<div class="reveal-demo">We turn messy workflows into AI-agentic products teams actually use.</div>
+</body></html>

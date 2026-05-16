@@ -1,0 +1,249 @@
+/**
+ * LatentShip Design System — Colors & Typography
+ * Source: https://github.com/LatentShip/latentship.github.io
+ *
+ * Google Fonts: Plus Jakarta Sans (body), Sora (display)
+ * Load via: https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap
+ */
+
+/* ─────────────────────────────────────────
+   FONT IMPORT
+───────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap');
+
+:root {
+
+  /* ─────────────────────────────────────
+     TYPOGRAPHY
+  ───────────────────────────────────── */
+
+  /* Font families */
+  --font-display: "Sora", "Plus Jakarta Sans", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+
+  /* Type scale */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-md:   16px;
+  --text-lg:   20px;
+  --text-xl:   clamp(28px, 3.5vw, 42px);
+  --text-hero: clamp(36px, 5.2vw, 64px);
+
+  /* Line heights */
+  --display-line: 1.12;
+  --body-line:    1.55;
+
+  /* Letter spacing */
+  --display-letter:  -0.03em;   /* display headings */
+  --eyebrow-letter:   0.08em;   /* uppercase labels */
+  --brand-letter:     0.02em;   /* brand name in nav */
+
+  /* ─────────────────────────────────────
+     BASE (RAW) COLORS
+  ───────────────────────────────────── */
+
+  /* Background */
+  --bg:           #f3f8f1;
+  --bg-soft:      #fbfdf9;
+  --surface:      #ffffff;
+  --surface-muted:#f4f8f1;
+
+  /* Ink (text) */
+  --ink:          #132019;
+  --ink-soft:     #3d4f44;
+  --ink-muted:    #6d7d73;
+
+  /* Brand greens */
+  --brand-50:     #edf8e3;
+  --brand-100:    #d9efc5;
+  --brand-200:    #bde092;
+  --brand-400:    #6fb23a;   /* primary brand green — CTAs, bullets, chips */
+  --brand-500:    #5b9830;   /* hover state, border accents */
+  --brand-700:    #3a6422;   /* eyebrows, back-links */
+
+  /* Dark surface (panel-dark) */
+  --dark-surface-from:  #152019;
+  --dark-surface-mid:   #0f1813;
+  --dark-surface-to:    #111c16;
+  --dark-fg:            #f4f8f2;
+  --dark-fg-soft:       #d4dfd1;
+  --dark-fg-muted:      #b1e17b;   /* timeline labels on dark */
+  --dark-border:        rgba(144, 203, 83, 0.24);
+
+  /* Status / semantic */
+  --info-100:     #e4efff;
+  --info-500:     #1f69d6;
+  --success-100:  #e2f6eb;
+  --success-500:  #227a48;
+  --warning-100:  #fff3dd;
+  --warning-500:  #a66a00;
+  --danger-100:   #ffe7e7;
+  --danger-500:   #ba2f2f;
+
+  /* Borders */
+  --line:         rgba(18, 32, 24, 0.12);
+  --line-strong:  rgba(18, 32, 24, 0.24);
+
+  /* Focus ring */
+  --focus:        #2c7be5;
+
+  /* ─────────────────────────────────────
+     SEMANTIC COLORS
+  ───────────────────────────────────── */
+
+  /* Page */
+  --color-page-bg:     var(--bg);
+  --color-page-fg:     var(--ink);
+
+  /* Panels */
+  --color-panel-bg:    color-mix(in srgb, var(--surface) 70%, #eff8e8 30%);
+  --color-panel-border:var(--line);
+
+  /* Dark panel */
+  --color-panel-dark-bg: linear-gradient(150deg, #152019 0%, #0f1813 55%, #111c16 100%);
+  --color-panel-dark-fg: var(--dark-fg);
+
+  /* Text */
+  --color-fg-1:       var(--ink);
+  --color-fg-2:       var(--ink-soft);
+  --color-fg-3:       var(--ink-muted);
+  --color-fg-brand:   var(--brand-700);   /* eyebrows */
+
+  /* Buttons — primary (dark) */
+  --color-btn-primary-bg:     #14211a;
+  --color-btn-primary-fg:     #f7fbf5;
+  --color-btn-primary-border: #0f1914;
+
+  /* Buttons — nav CTA (brand green) */
+  --color-btn-cta-bg:     var(--brand-400);
+  --color-btn-cta-fg:     #112018;
+  --color-btn-cta-border: var(--brand-500);
+
+  /* Buttons — ghost/secondary */
+  --color-btn-ghost-bg:     color-mix(in srgb, white 65%, #edf7e4 35%);
+  --color-btn-ghost-fg:     #213228;
+  --color-btn-ghost-border: color-mix(in srgb, var(--line) 88%, #dce8d4 12%);
+
+  /* Chips */
+  --color-chip-bg:     #edf7e3;
+  --color-chip-fg:     #33483e;
+  --color-chip-border: rgba(10, 16, 18, 0.14);
+
+  /* Active nav pill */
+  --color-nav-active-bg: #13201a;
+  --color-nav-active-fg: #f4f8f2;
+
+  /* ─────────────────────────────────────
+     SPACING (4px base grid)
+  ───────────────────────────────────── */
+
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   28px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+
+  /* ─────────────────────────────────────
+     BORDER RADIUS
+  ───────────────────────────────────── */
+
+  --radius-sm:   12px;   /* small items: mini-list, chips, form inputs */
+  --radius-md:   18px;   /* standard cards, why-list items, project cards */
+  --radius-lg:   26px;   /* hero panels, main panels */
+  --radius-pill: 999px;  /* nav, buttons, badges */
+
+  /* ─────────────────────────────────────
+     SHADOWS (warm near-black green)
+  ───────────────────────────────────── */
+
+  --shadow-sm:   0 10px 22px rgba(26, 42, 29, 0.07);
+  --shadow-md:   0 20px 40px rgba(21, 35, 26, 0.09);
+  --shadow-lg:   0 30px 64px rgba(18, 28, 22, 0.12);
+
+  /* ─────────────────────────────────────
+     ANIMATION
+  ───────────────────────────────────── */
+
+  --ease-out:    cubic-bezier(0.2, 0.8, 0.2, 1);
+  --fast:        140ms;   /* color, opacity */
+  --normal:      220ms;   /* transforms, shadows */
+  --reveal:      420ms;   /* scroll-reveal fade-up */
+
+  /* ─────────────────────────────────────
+     LAYOUT
+  ───────────────────────────────────── */
+
+  --container:   1140px;
+
+  /* ─────────────────────────────────────
+     ICON (CSS mask arrow)
+  ───────────────────────────────────── */
+
+  --arrow-size: 17px;
+  --arrow-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18 12a2 2 0 0 0-.59-1.4l-4.29-4.3a1 1 0 1 0-1.41 1.42L15 11H5a1 1 0 1 0 0 2h10l-3.29 3.29a1 1 0 1 0 1.41 1.42l4.29-4.3A2 2 0 0 0 18 12Z'/%3E%3C/svg%3E");
+}
+
+/* ─────────────────────────────────────────
+   SEMANTIC ELEMENT STYLES
+───────────────────────────────────────── */
+
+/* Headings — always Sora */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: var(--display-line);
+  letter-spacing: var(--display-letter);
+  text-wrap: balance;
+  color: var(--color-fg-1);
+  margin: 0;
+}
+
+h1 { font-size: var(--text-hero); }
+h2 { font-size: var(--text-xl); }
+h3 { font-size: var(--text-lg); }
+
+/* Body */
+p {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: var(--body-line);
+  color: var(--color-fg-1);
+  margin: 0;
+}
+
+/* Code (monospace — Plus Jakarta Sans has no mono; fallback to system mono) */
+code, pre {
+  font-family: "Fira Code", "Cascadia Code", ui-monospace, "Courier New", monospace;
+  font-size: 13px;
+}
+
+/* Eyebrow label */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: var(--eyebrow-letter);
+  text-transform: uppercase;
+  color: var(--brand-700);
+}
+
+/* Lead (large body) */
+.lead {
+  font-family: var(--font-body);
+  font-size: var(--text-md);
+  line-height: 1.62;
+  color: var(--color-fg-2);
+}
+
+/* Caption / meta */
+.meta, .caption {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-fg-3);
+}

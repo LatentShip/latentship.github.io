@@ -1,0 +1,31 @@
+<!doctype html><html><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:#f3f8f1;padding:20px;display:flex;flex-direction:column;gap:12px;}
+.row{display:flex;gap:8px;flex-wrap:wrap;}
+.swatch{display:flex;flex-direction:column;gap:6px;flex:1;min-width:72px;}
+.chip{height:52px;border-radius:10px;border:1px solid rgba(18,32,24,0.1);}
+.label{font-size:11px;font-weight:800;color:#3d4f44;}
+.hex{font-size:10px;font-weight:700;color:#6d7d73;}
+.section-label{font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#3a6422;margin-bottom:2px;}
+</style></head><body>
+<div class="section-label">Backgrounds</div>
+<div class="row">
+  <div class="swatch"><div class="chip" style="background:#f3f8f1;"></div><div class="label">bg</div><div class="hex">#f3f8f1</div></div>
+  <div class="swatch"><div class="chip" style="background:#fbfdf9;"></div><div class="label">bg-soft</div><div class="hex">#fbfdf9</div></div>
+  <div class="swatch"><div class="chip" style="background:#ffffff;"></div><div class="label">surface</div><div class="hex">#ffffff</div></div>
+  <div class="swatch"><div class="chip" style="background:#f4f8f1;"></div><div class="label">surface-muted</div><div class="hex">#f4f8f1</div></div>
+</div>
+<div class="section-label" style="margin-top:4px;">Ink (Text)</div>
+<div class="row">
+  <div class="swatch"><div class="chip" style="background:#132019;"></div><div class="label">ink</div><div class="hex">#132019</div></div>
+  <div class="swatch"><div class="chip" style="background:#3d4f44;"></div><div class="label">ink-soft</div><div class="hex">#3d4f44</div></div>
+  <div class="swatch"><div class="chip" style="background:#6d7d73;"></div><div class="label">ink-muted</div><div class="hex">#6d7d73</div></div>
+</div>
+<div class="section-label" style="margin-top:4px;">Borders</div>
+<div class="row">
+  <div class="swatch"><div class="chip" style="background:rgba(18,32,24,0.12);"></div><div class="label">line</div><div class="hex">rgba(18,32,24,.12)</div></div>
+  <div class="swatch"><div class="chip" style="background:rgba(18,32,24,0.24);"></div><div class="label">line-strong</div><div class="hex">rgba(18,32,24,.24)</div></div>
+</div>
+</body></html>

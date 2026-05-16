@@ -191,6 +191,7 @@ textarea:focus-visible {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
+  display: block;
   filter: drop-shadow(0 4px 10px rgba(90, 146, 45, 0.2));
 }
 

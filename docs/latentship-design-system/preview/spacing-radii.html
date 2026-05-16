@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:#f3f8f1;padding:20px;display:flex;flex-direction:column;gap:14px;}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;}
+.item{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.box{background:color-mix(in srgb,white 70%,#eff8e8 30%);border:1px solid rgba(18,32,24,0.12);width:72px;height:52px;}
+.token{font-size:10px;font-weight:800;color:#3d4f44;}
+.val{font-size:9px;color:#6d7d73;}
+.section-label{font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#3a6422;}
+</style></head><body>
+<div class="section-label">Border Radius</div>
+<div class="row">
+  <div class="item"><div class="box" style="border-radius:0;"></div><div class="token">0</div><div class="val">none</div></div>
+  <div class="item"><div class="box" style="border-radius:12px;"></div><div class="token">radius-sm</div><div class="val">12px</div></div>
+  <div class="item"><div class="box" style="border-radius:18px;"></div><div class="token">radius-md</div><div class="val">18px</div></div>
+  <div class="item"><div class="box" style="border-radius:26px;"></div><div class="token">radius-lg</div><div class="val">26px</div></div>
+  <div class="item"><div class="box" style="border-radius:999px;width:80px;"></div><div class="token">radius-pill</div><div class="val">999px</div></div>
+</div>
+<div class="section-label" style="margin-top:2px;">Usage</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:11px;font-weight:700;color:#3d4f44;">
+  <span style="border:1px solid rgba(18,32,24,0.12);border-radius:12px;padding:5px 10px;background:#fbfef9;">sm — inputs, mini-list</span>
+  <span style="border:1px solid rgba(18,32,24,0.12);border-radius:18px;padding:5px 10px;background:#fbfef9;">md — project cards</span>
+  <span style="border:1px solid rgba(18,32,24,0.12);border-radius:26px;padding:5px 10px;background:#fbfef9;">lg — hero panels</span>
+  <span style="border:1px solid rgba(18,32,24,0.12);border-radius:999px;padding:5px 14px;background:#fbfef9;">pill — nav, CTAs</span>
+</div>
+</body></html>

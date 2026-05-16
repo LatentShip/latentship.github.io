@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="UTF-8"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Plus Jakarta Sans",sans-serif;background:#f3f8f1;padding:20px;display:flex;flex-direction:column;gap:10px;}
+.row{display:flex;gap:8px;flex-wrap:wrap;}
+.swatch{display:flex;flex-direction:column;gap:5px;flex:1;min-width:80px;}
+.chip{height:48px;border-radius:10px;border:1px solid rgba(18,32,24,0.1);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;padding:0 8px;}
+.label{font-size:11px;font-weight:800;color:#3d4f44;}
+.section-label{font-size:10px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#3a6422;margin-bottom:2px;}
+</style></head><body>
+<div class="section-label">Status Colors</div>
+<div class="row">
+  <div class="swatch">
+    <div class="chip" style="background:#e4efff;color:#1f69d6;border-color:rgba(31,105,214,0.25);">Info</div>
+    <div class="label">info</div>
+  </div>
+  <div class="swatch">
+    <div class="chip" style="background:#e2f6eb;color:#227a48;border-color:rgba(34,122,72,0.25);">Success</div>
+    <div class="label">success</div>
+  </div>
+  <div class="swatch">
+    <div class="chip" style="background:#fff3dd;color:#a66a00;border-color:rgba(166,106,0,0.25);">Warning</div>
+    <div class="label">warning</div>
+  </div>
+  <div class="swatch">
+    <div class="chip" style="background:#ffe7e7;color:#ba2f2f;border-color:rgba(186,47,47,0.25);">Danger</div>
+    <div class="label">danger</div>
+  </div>
+</div>
+<div class="section-label" style="margin-top:4px;">Status Chips in Context</div>
+<div class="row" style="gap:6px;align-items:center;flex-wrap:wrap;">
+  <span style="border:1px solid rgba(31,105,214,0.25);background:#e4efff;color:#1f69d6;border-radius:999px;font-size:11px;font-weight:700;padding:4px 10px;">AI Systems</span>
+  <span style="border:1px solid rgba(34,122,72,0.25);background:#e2f6eb;color:#227a48;border-radius:999px;font-size:11px;font-weight:700;padding:4px 10px;">Shipped</span>
+  <span style="border:1px solid rgba(166,106,0,0.25);background:#fff3dd;color:#a66a00;border-radius:999px;font-size:11px;font-weight:700;padding:4px 10px;">In Review</span>
+  <span style="border:1px solid rgba(186,47,47,0.25);background:#ffe7e7;color:#ba2f2f;border-radius:999px;font-size:11px;font-weight:700;padding:4px 10px;">Blocked</span>
+  <span style="border:1px solid rgba(10,16,18,0.14);background:#edf7e3;color:#33483e;border-radius:999px;font-size:11px;font-weight:700;padding:4px 10px;">FinTech</span>
+  <span style="border:1px solid rgba(10,16,18,0.14);background:#edf7e3;color:#33483e;border-radius:999px;font-size:11px;font-weight:700;padding:4px 10px;">EdTech</span>
+</div>
+</body></html>
