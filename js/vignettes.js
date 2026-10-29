@@ -6,15 +6,18 @@
 
 import { reduceMotion } from "./site.js";
 
-const inr = (n) => `₹${Math.round(n).toLocaleString("en-IN")}`;
+// Dollars; per-ounce metal prices keep their cents.
+const usd = (n, cents = false) =>
+  `$${(cents ? n : Math.round(n)).toLocaleString("en-US", cents ? { minimumFractionDigits: 2, maximumFractionDigits: 2 } : {})}`;
+const oz = (n) => usd(n, true);
 const barIcon =
   '<svg viewBox="0 0 24 24" fill="none" stroke="#e6f6f7" stroke-width="1.7" stroke-linejoin="round"><path d="M3.5 16.5 6.5 10h11l3 6.5h-17Z"/><path d="M7.5 10 9.5 6h5l2 4"/></svg>';
 
 const RATES = [
-  ["Kovai Bullion", 114020],
-  ["Sree Metals", 114060],
-  ["Raja Gold House", 114110],
-  ["Annapoorna Bullion", 114150],
+  ["Bayview Bullion", 4018.4],
+  ["Cedar Ridge Metals", 4019.1],
+  ["Lakeshore Gold Exchange", 4020.25],
+  ["Northgate Precious Metals", 4021.6],
 ];
 
 const MOVERS = [
@@ -28,11 +31,11 @@ export function vignette(kind) {
     return `<div class="vg" data-vg="rates">
       <div class="vg-rates">
         <div class="vg-row"><span class="vg-app"><span class="vg-icon">${barIcon}</span>Live Rates</span><span class="vg-live">LIVE</span></div>
-        <div class="vg-tabs"><span class="on">Gold 999</span><span>Silver 999</span></div>
-        <p class="vg-cap">SELL RATES · 10 G</p>
+        <div class="vg-tabs"><span class="on">Gold .9999</span><span>Silver .999</span></div>
+        <p class="vg-cap">SELL RATES · 1 OZ</p>
         <div class="vg-list">${RATES.map(
           ([name, price], i) =>
-            `<div class="vg-item${i === 0 ? " best" : ""}" data-i="${i}" style="transform:translateY(${i * 35}px)"><span class="n">${name}</span><span class="tag">BEST</span><span class="p">${inr(price)}</span></div>`
+            `<div class="vg-item${i === 0 ? " best" : ""}" data-i="${i}" style="transform:translateY(${i * 35}px)"><span class="n">${name}</span><span class="tag">BEST</span><span class="p">${oz(price)}</span></div>`
         ).join("")}</div>
         <div class="vg-mover"><span class="vg-ai">AI</span><span data-k="mover"><b>${MOVERS[0][0]}</b> ${MOVERS[0][1]}</span></div>
       </div>
@@ -44,16 +47,16 @@ export function vignette(kind) {
       <div class="vg-desk">
         <div class="vg-panel">
           <div class="vg-row"><span class="vg-cap" style="margin:0">PRICE FORMULA</span><span class="vg-live">LIVE</span></div>
-          <div class="vg-row" style="margin-top:6px;font-weight:600;font-size:13px">Gold 999 · 10 g</div>
+          <div class="vg-row" style="margin-top:6px;font-weight:600;font-size:13px">Gold .9999 · 1 oz</div>
           <div class="vg-formula">
-            <div class="vg-row"><span>MCX gold benchmark</span><b data-k="mcx">${inr(113480)}</b></div>
-            <div class="vg-row"><span>Premium</span><b>+ ${inr(420)}</b></div>
-            <div class="vg-row"><span>Markup · Retail</span><b>+ ${inr(150)}</b></div>
-            <div class="vg-row vg-sum"><span>Your sell rate</span><b data-k="sell">${inr(114050)}</b></div>
+            <div class="vg-row"><span>COMEX gold benchmark</span><b data-k="mcx">${oz(4011.2)}</b></div>
+            <div class="vg-row"><span>Premium</span><b>+ ${oz(12.5)}</b></div>
+            <div class="vg-row"><span>Markup · Retail</span><b>+ ${oz(6)}</b></div>
+            <div class="vg-row vg-sum"><span>Your sell rate</span><b data-k="sell">${oz(4029.7)}</b></div>
           </div>
         </div>
-        <div class="vg-order" data-k="order"><span class="vg-buy">BUY</span><div><span data-k="who">Sri Ganesh Jewellers</span><small data-k="qty">5 × Gold 999 · 10 g</small></div><b data-k="amt">${inr(570250)}</b></div>
-        <div class="vg-hedge"><span class="vg-ai">AI</span><span>Exposure</span><span class="vg-meter"><i data-k="meter" style="--w:34%"></i></span><span data-k="exp">+1.1 kg</span></div>
+        <div class="vg-order" data-k="order"><span class="vg-buy">BUY</span><div><span data-k="who">Main Street Jewelers</span><small data-k="qty">5 × Gold .9999 · 1 oz</small></div><b data-k="amt">${oz(20148.5)}</b></div>
+        <div class="vg-hedge"><span class="vg-ai">AI</span><span>Exposure</span><span class="vg-meter"><i data-k="meter" style="--w:34%"></i></span><span data-k="exp">+35 oz</span></div>
       </div>
       <span class="vg-note">Illustrative</span>
     </div>`;
@@ -62,18 +65,18 @@ export function vignette(kind) {
     return `<div class="vg" data-vg="sync">
       <div class="vg-sync">
         <div class="vg-tally">
-          <div class="vg-row" style="font-size:10px;font-weight:600;margin-bottom:4px"><span>Tally Prime · Day Book</span><span style="color:#6b778c;font-weight:500">Office PC</span></div>
+          <div class="vg-row" style="font-size:10px;font-weight:600;margin-bottom:4px"><span>Desktop books · Journal</span><span style="color:#6b778c;font-weight:500">Office PC</span></div>
           <div data-k="rows">
-            <div class="r"><span>06-Oct</span><span>Sales · Sri Ganesh</span><b>${inr(570250)}</b></div>
-            <div class="r"><span>06-Oct</span><span>Receipt · Kovai Traders</span><b>${inr(240000)}</b></div>
-            <div class="r"><span>05-Oct</span><span>Purchase · Sree Metals</span><b>${inr(1132600)}</b></div>
+            <div class="r"><span>Oct 6</span><span>Sales · Main Street</span><b>${usd(20149)}</b></div>
+            <div class="r"><span>Oct 6</span><span>Receipt · Harbor</span><b>${usd(24000)}</b></div>
+            <div class="r"><span>Oct 5</span><span>Purchase · Cedar</span><b>${usd(113260)}</b></div>
           </div>
         </div>
         <svg class="vg-beam" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0C55 0 45 100 100 100"/></svg>
         <div class="vg-cloud">
           <div class="vg-row"><span>Your Bullion House</span><span class="vg-sync-pill" data-k="pill">● IN SYNC</span></div>
-          <div class="vg-tiles"><div><small>RECEIVABLES</small><b data-k="recv">${inr(1842300)}</b></div><div><small>CASH &amp; BANK</small><b data-k="cash">${inr(4215780)}</b></div></div>
-          <div class="vg-flag"><span class="vg-ai">AI</span><span>PB-0881 · GST doesn't match the ledger</span><em>Review</em></div>
+          <div class="vg-tiles"><div><small>RECEIVABLES</small><b data-k="recv">${usd(184230)}</b></div><div><small>CASH &amp; BANK</small><b data-k="cash">${usd(421578)}</b></div></div>
+          <div class="vg-flag"><span class="vg-ai">AI</span><span>PB-0881 · Sales tax doesn't match the ledger</span><em>Review</em></div>
         </div>
       </div>
       <span class="vg-note">Illustrative</span>
@@ -113,10 +116,10 @@ const players = {
       const n = 1 + Math.floor(Math.random() * 2);
       for (let k = 0; k < n; k += 1) {
         const i = Math.floor(Math.random() * prices.length);
-        const delta = Math.round((Math.random() - 0.5) * 110 / 10) * 10 || 20;
+        const delta = Math.round((Math.random() - 0.5) * 22) / 10 || 0.2;
         prices[i] += delta;
         const p = items[i].querySelector(".p");
-        p.textContent = inr(prices[i]);
+        p.textContent = oz(prices[i]);
         p.classList.remove("up", "down");
         void p.offsetWidth;
         p.classList.add(delta > 0 ? "up" : "down");
@@ -137,28 +140,28 @@ const players = {
   desk(el) {
     const q = (k) => el.querySelector(`[data-k="${k}"]`);
     const buyers = [
-      ["Sri Ganesh Jewellers", 5],
-      ["Lakshmi Gold Works", 2],
-      ["Kovai Traders", 8],
-      ["Meenakshi Jewels", 3],
+      ["Main Street Jewelers", 5],
+      ["Harbor Coin & Gold", 2],
+      ["Cedar Ridge Jewelers", 8],
+      ["Westside Gold Buyers", 3],
     ];
-    let mcx = 113480;
+    let bench = 4011.2;
     let tick = 0;
-    let exposure = 1.1;
+    let exposure = 35;
     return () => {
       tick += 1;
-      mcx += Math.round((Math.random() - 0.48) * 9) * 10;
-      q("mcx").textContent = inr(mcx);
-      q("sell").textContent = inr(mcx + 570);
+      bench += Math.round((Math.random() - 0.48) * 9) / 10;
+      q("mcx").textContent = oz(bench);
+      q("sell").textContent = oz(bench + 18.5);
       if (tick % 3 === 1) {
         const [who, qty] = buyers[(tick / 3) % buyers.length | 0];
         q("who").textContent = who;
-        q("qty").textContent = `${qty} × Gold 999 · 10 g`;
-        q("amt").textContent = inr((mcx + 570) * qty);
+        q("qty").textContent = `${qty} × Gold .9999 · 1 oz`;
+        q("amt").textContent = oz((bench + 18.5) * qty);
         q("order").classList.add("is-on");
-        exposure = exposure > 2.6 ? 0.8 : exposure + qty * 0.12;
-        q("exp").textContent = `+${exposure.toFixed(1)} kg`;
-        q("meter").style.setProperty("--w", `${Math.min(96, 20 + exposure * 26)}%`);
+        exposure = exposure > 85 ? 25 : exposure + qty * 4;
+        q("exp").textContent = `+${exposure} oz`;
+        q("meter").style.setProperty("--w", `${Math.min(96, 20 + exposure * 0.85)}%`);
       } else if (tick % 3 === 0) {
         q("order").classList.remove("is-on");
       }
@@ -170,21 +173,21 @@ const players = {
     const pill = el.querySelector('[data-k="pill"]');
     const recv = el.querySelector('[data-k="recv"]');
     const cash = el.querySelector('[data-k="cash"]');
-    const vouchers = [
-      ["07-Oct", "Sales · Lakshmi Gold", 228400],
-      ["07-Oct", "Payment · HDFC Bank", 185000],
-      ["07-Oct", "Receipt · Meenakshi", 312500],
-      ["08-Oct", "Sales · Kovai Traders", 912000],
+    const entries = [
+      ["Oct 7", "Sales · Harbor Coin", 22840],
+      ["Oct 7", "Payment · Bank", 18500],
+      ["Oct 7", "Receipt · Westside", 31250],
+      ["Oct 8", "Sales · Cedar Ridge", 91200],
     ];
-    let r = 1842300;
-    let c = 4215780;
+    let r = 184230;
+    let c = 421578;
     let tick = 0;
     return () => {
-      const [d, what, amt] = vouchers[tick % vouchers.length];
+      const [d, what, amt] = entries[tick % entries.length];
       tick += 1;
       const row = document.createElement("div");
       row.className = "r new";
-      row.innerHTML = `<span>${d}</span><span>${what}</span><b>${inr(amt)}</b>`;
+      row.innerHTML = `<span>${d}</span><span>${what}</span><b>${usd(amt)}</b>`;
       rows.prepend(row);
       while (rows.children.length > 3) rows.lastElementChild.remove();
       pill.textContent = "● SYNCING";
@@ -195,8 +198,8 @@ const players = {
           r -= amt;
           c += amt;
         } else c -= amt;
-        recv.textContent = inr(r);
-        cash.textContent = inr(c);
+        recv.textContent = usd(r);
+        cash.textContent = usd(c);
         pill.textContent = "● IN SYNC";
         pill.style.color = "";
       }, 700);

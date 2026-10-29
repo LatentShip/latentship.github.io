@@ -58,7 +58,7 @@ export function renderFeatured(target) {
     `<div class="family" data-reveal>
       <div class="family-head">
         <div><p class="eyebrow">One bullion fintech</p><h3>The bullion suite</h3></div>
-        <p>Three products for India's bullion market: a rates app, a trading desk and a cloud bridge for Tally.</p>
+        <p>Three products for the bullion trade: a rates app, a trading desk and a cloud bridge for desktop accounting.</p>
       </div>
       <div class="family-row">${["bullion-trading-desk", "accounting-sync", "live-rates-app"].map((slug) => card(bySlug(slug), { reveal: false })).join("")}</div>
     </div>`;

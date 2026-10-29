@@ -72,7 +72,7 @@ export const projects = [
       "Bullion desks ran on phone calls, spreadsheets and legacy tools. Rates changed by the second, and every order had to be priced, limit-checked, confirmed and invoiced by hand.",
     built: [
       "Live rate streaming to a branded website and app",
-      "A price formula engine: premiums and markups on MCX or spot, per customer group",
+      "A price formula engine: premiums and markups on the exchange or spot price, per customer group",
       "Market, limit and stop orders, confirmed on the dealing desk",
       "Customer limits checked on every order",
       "Invoicing, ledgers and a real-time risk and MTM monitor",
@@ -92,21 +92,21 @@ export const projects = [
     family: "bullion",
     category: "fintech",
     kind: "Accounting integration",
-    tagline: "Your Tally, in the cloud.",
+    tagline: "Your desktop books, in the cloud.",
     summary:
-      "Connects the Tally Prime books a business already keeps to the cloud and keeps them in sync, so the accounts team never keys an entry in twice.",
+      "Connects the desktop accounting books a business already keeps to the cloud and keeps them in sync, so the accounts team never keys an entry in twice.",
     problem:
       "Accounts lived on one office PC. Getting a balance meant a phone call, and every invoice and bill was typed in by hand.",
     built: [
-      "A connector for existing Tally Prime companies, with no migration",
-      "Vouchers and ledgers synced to the cloud continuously, in the background",
+      "A connector for the desktop accounting files a business already has, with no migration",
+      "Transactions and ledgers synced to the cloud continuously, in the background",
       "Balances, ledgers and outstanding amounts from any browser",
     ],
     highlight: {
       label: "AI inside",
-      text: "Intelligent bookkeeping reads invoices and bills, drafts the matching voucher against the right ledgers, and holds anything that doesn't add up for the accountant to review.",
+      text: "Intelligent bookkeeping reads invoices and bills, drafts the matching entry against the right accounts, and holds anything that doesn't add up for the accountant to review.",
     },
-    outcome: "Connected in an afternoon. The accountant keeps working in Tally; the double entry goes away.",
+    outcome: "Connected in an afternoon. The accountant keeps working in the desktop software they know; the double entry goes away.",
     media: { vignette: "sync", tint: "#0d1526", dark: true },
   },
   {
@@ -119,11 +119,11 @@ export const projects = [
     kind: "Mobile app",
     tagline: "Know the best rate first.",
     summary:
-      "An AI-based and self-healing price aggregating engine for jewellers and bullion buyers. It compares live gold and silver rates across bullions, with short AI notes on what's moving the market.",
+      "An AI-based and self-healing price aggregating engine for jewelers and bullion buyers. It compares live gold and silver rates across dealers, with short AI notes on what's moving the market.",
     problem:
-      "Buyers rang round bullions or flicked between WhatsApp groups to find a rate, and by the time they had compared, the market had moved.",
+      "Buyers called around dealers or flipped between group chats to find a rate, and by the time they had compared, the market had moved.",
     built: [
-      "Live gold and silver rates from bullions nearby, updating as they change",
+      "Live gold and silver rates from dealers nearby, updating as they change",
       "The best quote for the product you're watching, always on top",
       "Native apps for iOS and Android",
     ],
@@ -174,9 +174,9 @@ export const projects = [
       "Every order meant a chain of emails, calls and spreadsheets between clients, approvers and suppliers, and nobody had the full picture.",
     built: [
       "Quote, approval and order orchestration",
-      "Shipment visibility and GST-compliant invoicing",
+      "Shipment visibility and tax-compliant invoicing",
       "Supplier management with WhatsApp-native coordination",
-      "Receivables ageing and a financial overview",
+      "Receivables aging and a financial overview",
     ],
     highlight: {
       label: "Automation",
