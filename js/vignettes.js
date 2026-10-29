@@ -27,7 +27,7 @@ export function vignette(kind) {
   if (kind === "rates") {
     return `<div class="vg" data-vg="rates">
       <div class="vg-rates">
-        <div class="vg-row"><span class="vg-app"><span class="vg-icon">${barIcon}</span>orob</span><span class="vg-live">LIVE</span></div>
+        <div class="vg-row"><span class="vg-app"><span class="vg-icon">${barIcon}</span>Live Rates</span><span class="vg-live">LIVE</span></div>
         <div class="vg-tabs"><span class="on">Gold 999</span><span>Silver 999</span></div>
         <p class="vg-cap">SELL RATES · 10 G</p>
         <div class="vg-list">${RATES.map(
@@ -88,7 +88,7 @@ export function vignette(kind) {
           <p class="vg-arch">Your archetype<b>Revealed</b></p>
         </div>
         <div class="vg-card vg-chat">
-          <div class="vg-bubble" data-b="0"><small>THRIVE · DAY 7</small>Last week you said Mondays drain you. Want to plan this one differently?</div>
+          <div class="vg-bubble" data-b="0"><small>COMPANION · DAY 7</small>Last week you said Mondays drain you. Want to plan this one differently?</div>
           <div class="vg-bubble me" data-b="1">Yes. Start with the 1:1 I keep putting off.</div>
           <div class="vg-bubble" data-b="2"><span class="vg-dots"><i></i><i></i><i></i></span></div>
         </div>

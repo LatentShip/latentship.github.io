@@ -48,19 +48,19 @@ export function card(project, { size = "", href = "./work/", reveal = true } = {
   </article>`;
 }
 
-/* The home page selection: two headline builds, then the orob family. */
+/* The home page selection: two headline builds, then the bullion suite. */
 export function renderFeatured(target) {
   if (!target) return;
-  const family = projects.filter((p) => p.family === "orob");
+  const family = projects.filter((p) => p.family === "bullion");
   target.innerHTML =
-    card(bySlug("thrive-ever"), { size: "span-7" }) +
-    card(bySlug("bilkool-ezee"), { size: "span-5" }) +
+    card(bySlug("growth-companion"), { size: "span-7" }) +
+    card(bySlug("procurement-hub"), { size: "span-5" }) +
     `<div class="family" data-reveal>
       <div class="family-head">
-        <div><p class="eyebrow">Xaurum Fintech</p><h3>The orob family</h3></div>
+        <div><p class="eyebrow">One bullion fintech</p><h3>The bullion suite</h3></div>
         <p>Three products for India's bullion market: a rates app, a trading desk and a cloud bridge for Tally.</p>
       </div>
-      <div class="family-row">${["orob-desk", "orob-sync", "orob"].map((slug) => card(bySlug(slug), { reveal: false })).join("")}</div>
+      <div class="family-row">${["bullion-trading-desk", "accounting-sync", "live-rates-app"].map((slug) => card(bySlug(slug), { reveal: false })).join("")}</div>
     </div>`;
   observeReveals(target);
   playVignettes(target);

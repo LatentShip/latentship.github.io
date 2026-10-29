@@ -2,36 +2,36 @@
 
 const PROJECTS = [
   {
-    slug: 'aaroha-academy', title: 'Aaroha Academy', industry: 'AI Systems',
+    slug: 'leadership-academy', title: 'Leadership Academy', industry: 'AI Systems',
     summary: 'AI-enabled learning and coaching platform with role-based workspaces, streaming coach interactions, transcription, and privacy-aware learner support.',
     posterLine: 'AI coach + structured learning operations', duration: '6 weeks',
     tags: ['AI Systems', 'EdTech'],
     preview: 'linear-gradient(140deg, #0e1729 0%, #4b67a4 40%, #b5e67a 100%)',
-    image: '../../assets/AarohaAcademy_1.png',
+    image: '../../../../assets/img/work/leadership-academy/1-1200.jpg',
   },
   {
-    slug: 'algobullion', title: 'AlgoBullion', industry: 'FinTech',
+    slug: 'bullion-trading-desk', title: 'Bullion Trading Desk', industry: 'FinTech',
     summary: 'Real-time bullion trading and pricing platform combining live market visibility, tenant-aware pricing, and trading operations.',
     posterLine: 'Live pricing + trading desk control', duration: '5 weeks',
     tags: ['FinTech', 'Operational Platforms'],
     preview: 'linear-gradient(140deg, #13211c 0%, #224d3f 45%, #a5dd63 100%)',
-    image: '../../assets/AlgoBullion_1.png',
+    image: '../../assets/logo-mark.svg',
   },
   {
-    slug: 'bilkool-ezee', title: 'Bilkool Ezee', industry: 'Operational Platforms',
+    slug: 'procurement-hub', title: 'Procurement Hub', industry: 'Operational Platforms',
     summary: 'Procurement operations platform for branded merchandise — ordering, shipment visibility, invoicing, and supplier coordination in one workflow.',
     posterLine: 'Unified procurement operations workflow', duration: '8 weeks',
     tags: ['Operational Platforms'],
     preview: 'linear-gradient(140deg, #b5e67a 0%, #d7f2ae 46%, #0f1218 100%)',
-    image: '../../assets/BilkoolEzee_1.png',
+    image: '../../../../assets/img/work/procurement-hub/1-1200.jpg',
   },
   {
-    slug: 'deepreflekt', title: 'DeepReflekt', industry: 'Coaching',
+    slug: 'coaching-insights', title: 'Coaching Insights', industry: 'Coaching',
     summary: 'Leadership coaching platform centered on reflection capture, collaborative coaching workflows, and AI-assisted insight generation.',
     posterLine: 'Reflection-led coaching continuity', duration: '7 weeks',
     tags: ['AI Systems', 'Coaching'],
     preview: 'linear-gradient(140deg, #101012 0%, #3a3a55 42%, #9fd957 100%)',
-    image: '../../assets/DeepReflekt_1.png',
+    image: '../../../../assets/img/work/coaching-insights/1-1200.jpg',
   },
 ];
 

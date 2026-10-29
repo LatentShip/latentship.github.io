@@ -1,8 +1,8 @@
 /*
  * Hero visual three, "orbit": the real products, in a slowly turning ring.
  *
- * Six things we shipped (live sketches of the orob family and Thrive Ever,
- * and screens from Aaroha Academy and Bilkool Ezee) circle in 3D. Drag or
+ * Six things we shipped (live sketches of the bullion suite and the growth companion,
+ * and screens from the leadership academy and the procurement hub) circle in 3D. Drag or
  * flick to spin it; let go and it glides, then settles on a product with a
  * soft snap. The name of the one in front sits underneath with a link to its
  * case, and pressing that front card opens it.
@@ -13,7 +13,7 @@ import { clamp, icon, onFrame, reduceMotion } from "./util.js";
 import { bySlug, media } from "./work.js";
 import { playVignettes } from "./vignettes.js";
 
-const SLUGS = ["orob-desk", "thrive-ever", "orob", "aaroha-academy", "orob-sync", "bilkool-ezee"];
+const SLUGS = ["bullion-trading-desk", "growth-companion", "live-rates-app", "leadership-academy", "accounting-sync", "procurement-hub"];
 const ROOT = new URL("../", import.meta.url);
 
 export function mountOrbit(el) {

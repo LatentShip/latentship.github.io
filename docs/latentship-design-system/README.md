@@ -47,10 +47,10 @@ There is **one product surface**: the LatentShip marketing + portfolio website. 
 ### Portfolio Projects (as of May 2026)
 | Project | Industry | Duration |
 |---|---|---|
-| Aaroha Academy | AI Systems, EdTech | 6 weeks |
-| AlgoBullion | FinTech, Operational Platforms | 5 weeks |
-| Bilkool Ezee | Operational Platforms | 8 weeks |
-| DeepReflekt | AI Systems, Coaching | 7 weeks |
+| Leadership Academy | AI Systems, EdTech | 6 weeks |
+| Bullion Trading Desk | FinTech, Operational Platforms | 5 weeks |
+| Procurement Hub | Operational Platforms | 8 weeks |
+| Coaching Insights | AI Systems, Coaching | 7 weeks |
 | Rewards & Loyalty Program | AgriTech, Operational Platforms | 4 weeks |
 
 ---
@@ -220,10 +220,6 @@ The canonical brand mark is the rocketship-style SVG from `preview/brand-logo.ht
 **Assets available in `assets/`:**
 - `logo-mark.svg` - rocketship brand mark
 - `favicon.svg` - rocketship brand mark favicon
-- `AarohaAcademy_1.png` — portfolio screenshot
-- `AlgoBullion_1.png` — portfolio screenshot
-- `BilkoolEzee_1.png` — portfolio screenshot
-- `DeepReflekt_1.png` — portfolio screenshot
 
 ---
 

@@ -2732,7 +2732,7 @@ html.intro-go .visual-label {
   height: clamp(280px, 30vw, 380px);
 }
 
-/* The orob family: one client, three products, one row. */
+/* The bullion suite: one client, three products, one row. */
 .family {
   grid-column: span 12;
   display: grid;
@@ -2848,7 +2848,7 @@ html.intro-go .visual-label {
   opacity: 0.45;
 }
 
-/* orob: the rates app */
+/* Live rates app */
 .vg-rates {
   width: 290px;
   border-radius: 18px;
@@ -3045,7 +3045,7 @@ html.intro-go .visual-label {
   font-weight: 600;
 }
 
-/* orob Desk: the price formula */
+/* Trading desk: the price formula */
 .vg-desk {
   width: 320px;
   display: grid;
@@ -3162,7 +3162,7 @@ html.intro-go .visual-label {
   transition: width 1.2s var(--ease);
 }
 
-/* orob Sync: Tally to cloud */
+/* Accounting sync: Tally to cloud */
 .vg-sync {
   position: relative;
   width: 340px;
@@ -3301,7 +3301,7 @@ html.intro-go .visual-label {
   animation: art-dash 1s linear infinite;
 }
 
-/* Thrive Ever: profile, companion and simulation */
+/* Growth companion: profile, companion and simulation */
 .vg-thrive {
   position: relative;
   width: 360px;
