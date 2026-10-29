@@ -1,207 +1,326 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AI-native product and engineering team building agentic workflows, operational platforms, and practical launch-ready systems."
-    />
-    <title>LatentShip | Home</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body data-page="home">
-    <header class="site-header" id="top">
-      <div class="container nav-shell">
-        <a href="./" class="brand">
-          <img class="brand-mark" src="./assets/logo-mark.svg" alt="" aria-hidden="true" />
-          <span class="brand-text">LatentShip</span>
-        </a>
-        <nav class="nav-links" aria-label="Primary">
-          <a href="./" class="active">Home</a>
-          <a href="./work/">Our Work</a>
-          <a href="./about/">About Us</a>
-        </nav>
-        <a href="./get-started/" class="nav-cta" data-track="cta_primary">Book a 15-min scoping call</a>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LatentShip · AI products that actually ship</title>
+<meta name="description" content="Apps, AI agents and operations platforms, built around your real workflow. See a proof of concept in 7 days, then pay by milestone, with your code in your own repository from day one.">
+<meta name="theme-color" content="#fbfcf9">
+<link rel="canonical" href="https://latentship.com/">
+<link rel="icon" href="./favicon.ico" sizes="32x32">
+<link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LatentShip">
+<meta property="og:title" content="LatentShip · AI products that actually ship">
+<meta property="og:description" content="Apps, AI agents and operations platforms, built around your real workflow. See a proof of concept in 7 days, then pay by milestone, with your code in your own repository from day one.">
+<meta property="og:url" content="https://latentship.com/">
+<meta property="og:image" content="https://latentship.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="./css/site.css">
+<script>(function(d){d.classList.add('js');var t=null;try{t=localStorage.getItem('ls-theme')}catch(e){}if(t!=='light'&&t!=='dark')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';d.setAttribute('data-theme',t);var m=document.querySelector('meta[name=theme-color]');if(m)m.content=t==='dark'?'#0a110d':'#fbfcf9';var intro=false,back=false;try{var n=performance.getEntriesByType('navigation')[0],type=n?n.type:'navigate';back=type==='back_forward';var q=location.search,force=/[?&]intro=(1|hold)(&|$)/.test(q),off=/[?&]intro=0(&|$)/.test(q);var internal=false;try{internal=!!document.referrer&&new URL(document.referrer).origin===location.origin}catch(e){}var y=0;try{y=+sessionStorage.getItem('ls-y:'+location.pathname)||0}catch(e){}intro=force||(true&&!off&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!location.hash&&!back&&(type==='reload'?y<80:!internal));}catch(e){}var land=0;try{land=+sessionStorage.getItem('ls-launch')||0;sessionStorage.removeItem('ls-launch')}catch(e){}if(!back&&land&&Date.now()-land<8000&&/\/get-started\/$/.test(location.pathname)&&!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('landing');else if(intro){d.classList.add('intro');window.__lsIntroFallback=setTimeout(function(){d.classList.remove('intro','intro-go','intro-landed')},4000)}else if(!back)d.classList.add('enter');setTimeout(function(){if(!window.__lsBoot)d.classList.remove('js','enter','landing')},3500);['pageswap','pagereveal'].forEach(function(n){addEventListener(n,function(e){var v=e.viewTransition;if(v)v.ready.catch(function(){})})})})(document.documentElement)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap">
+<link rel="modulepreload" href="./js/site.js">
+<link rel="modulepreload" href="./js/intro.js">
+<link rel="modulepreload" href="./js/hero.js">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "LatentShip", "url": "https://latentship.com/", "logo": "https://latentship.com/assets/apple-touch-icon.png", "email": "hello@latentship.com", "description": "A founder-led AI product studio building apps, AI agents and operations platforms that actually ship.", "founder": [{"@type": "Person", "name": "Hariharan Ragunathan"}, {"@type": "Person", "name": "Shayaz Pithawalla"}]}</script>
+<script type="module" src="./js/home.js"></script>
+</head>
+<body data-page="home">
+<a class="skip" href="#main">Skip to content</a>
+<svg class="svg-defs" aria-hidden="true" focusable="false"><defs><linearGradient id="ls-flame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9fd462"/><stop offset=".38" stop-color="#6fb23a"/><stop offset=".78" stop-color="#5b9830" stop-opacity=".55"/><stop offset="1" stop-color="#3a6422" stop-opacity="0"/></linearGradient></defs></svg>
+<div class="sky stars" data-stars="110" aria-hidden="true"></div>
+<div class="opener" data-opener aria-hidden="true">
+  <svg class="opener-trail" data-trail></svg>
+  <div class="opener-pad" data-pad>
+    <div class="opener-glow"></div>
+    <div class="opener-smoke" data-smoke></div>
+    <div class="opener-fly" data-fly><div class="opener-pop"><svg class="rocket" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="translate(6.2 17.9) rotate(45)"><g class="rk-flame"><path class="rk-flame-glow" d="M-3.7 0C-3.7 4.1-1.7 9.2 0 14.4 1.7 9.2 3.7 4.1 3.7 0 3.7-2.7-3.7-2.7-3.7 0Z"/><path class="rk-flame-outer" d="M-2.8 0C-2.8 3.4-1.3 7.6 0 11.6 1.3 7.6 2.8 3.4 2.8 0 2.8-2.2-2.8-2.2-2.8 0Z"/><path class="rk-flame-mid" d="M-1.9 0C-1.9 2.4-.9 5.2 0 8.1.9 5.2 1.9 2.4 1.9 0 1.9-1.5-1.9-1.5-1.9 0Z"/><path class="rk-flame-core" d="M-1 0C-1 1.4-.45 3 0 4.7.45 3 1 1.4 1 0 1-.8-1-.8-1 0Z"/></g></g><path class="rk-puff" d="M6.517 17.569c-1.157-1.145-3.364-.909-4.379.121-1.132 1.149-1.008 3.87-.959 4.381.046.483.432.863.916.902.13.01 3.028.294 4.356-1.019.97-1.049 1.218-3.185.066-4.386Z"/><path class="rk-glass" d="M12.071 11.958l-.029-.029c-1.636-1.662-.703-3.106 0-3.82.611-.62 2.095-1.71 3.805 0 1.649 1.649.703 3.106 0 3.82-.61.62-2.05 1.755-3.776.029Z"/><path class="rk-fin" d="M2.206 9.034 6.847 4.32c.45-.457.904-.877 1.359-1.262-1.382-.48-2.856-.22-3.73.192-1.688.795-2.935 2.844-3.072 3.075-.075.127-.121.268-.135.415-.021.215-.129 1.627.358 3.012.167-.255.36-.495.578-.717Z"/><path class="rk-fin" d="M20.638 19.608c.402-.881.642-2.367.172-3.762-.364.44-.76.88-1.189 1.316l-4.641 4.715c-.233.237-.488.445-.759.624 1.365.49 2.751.386 2.964.366.151-.014.298-.062.428-.142.227-.138 2.245-1.405 3.026-3.117Z"/><path class="rk-body" d="M18.196 15.759c6.363-6.464 4.385-13.443 4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552 4.372l-4.641 4.714c-.63.641-.9 1.553-.719 2.44.175.862.755 1.576 1.557 1.908 1.154.479 2.107 1.101 2.896 1.896.768.78 1.353 1.791 1.869 2.95 1.041 2.336 3.666 1.747 4.321.844l4.641-4.715Zm-6.125-3.801-.029-.029c-1.636-1.662-.703-3.106 0-3.82.611-.62 2.095-1.71 3.805 0 1.649 1.649.703 3.106 0 3.82-.61.62-2.05 1.755-3.776.029Z"/></svg></div></div>
+  </div>
+</div>
+<header class="nav" data-nav>
+  <div class="nav-bar">
+    <a class="brand" href="./" aria-label="LatentShip home"><span class="brand-mark"><span class="brand-ring"></span><svg class="rocket" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="translate(6.2 17.9) rotate(45)"><g class="rk-flame"><path class="rk-flame-glow" d="M-3.7 0C-3.7 4.1-1.7 9.2 0 14.4 1.7 9.2 3.7 4.1 3.7 0 3.7-2.7-3.7-2.7-3.7 0Z"/><path class="rk-flame-outer" d="M-2.8 0C-2.8 3.4-1.3 7.6 0 11.6 1.3 7.6 2.8 3.4 2.8 0 2.8-2.2-2.8-2.2-2.8 0Z"/><path class="rk-flame-mid" d="M-1.9 0C-1.9 2.4-.9 5.2 0 8.1.9 5.2 1.9 2.4 1.9 0 1.9-1.5-1.9-1.5-1.9 0Z"/><path class="rk-flame-core" d="M-1 0C-1 1.4-.45 3 0 4.7.45 3 1 1.4 1 0 1-.8-1-.8-1 0Z"/></g></g><path class="rk-puff" d="M6.517 17.569c-1.157-1.145-3.364-.909-4.379.121-1.132 1.149-1.008 3.87-.959 4.381.046.483.432.863.916.902.13.01 3.028.294 4.356-1.019.97-1.049 1.218-3.185.066-4.386Z"/><path class="rk-glass" d="M12.071 11.958l-.029-.029c-1.636-1.662-.703-3.106 0-3.82.611-.62 2.095-1.71 3.805 0 1.649 1.649.703 3.106 0 3.82-.61.62-2.05 1.755-3.776.029Z"/><path class="rk-fin" d="M2.206 9.034 6.847 4.32c.45-.457.904-.877 1.359-1.262-1.382-.48-2.856-.22-3.73.192-1.688.795-2.935 2.844-3.072 3.075-.075.127-.121.268-.135.415-.021.215-.129 1.627.358 3.012.167-.255.36-.495.578-.717Z"/><path class="rk-fin" d="M20.638 19.608c.402-.881.642-2.367.172-3.762-.364.44-.76.88-1.189 1.316l-4.641 4.715c-.233.237-.488.445-.759.624 1.365.49 2.751.386 2.964.366.151-.014.298-.062.428-.142.227-.138 2.245-1.405 3.026-3.117Z"/><path class="rk-body" d="M18.196 15.759c6.363-6.464 4.385-13.443 4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552 4.372l-4.641 4.714c-.63.641-.9 1.553-.719 2.44.175.862.755 1.576 1.557 1.908 1.154.479 2.107 1.101 2.896 1.896.768.78 1.353 1.791 1.869 2.95 1.041 2.336 3.666 1.747 4.321.844l4.641-4.715Zm-6.125-3.801-.029-.029c-1.636-1.662-.703-3.106 0-3.82.611-.62 2.095-1.71 3.805 0 1.649 1.649.703 3.106 0 3.82-.61.62-2.05 1.755-3.776.029Z"/></svg></span><span class="brand-name">LatentShip</span></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="./work/">Work</a>
+      <a href="#how">How we work</a>
+      <a href="./about/">About</a>
+    </nav>
+    <div class="nav-tools"><button class="icon-btn sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Turn sound on"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 9.5h2.8L11.5 6v12l-4.2-3.5H4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path class="snd-w1" d="M14.6 9.6a3.3 3.3 0 0 1 0 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="snd-w2" d="M17.1 7.3a6.6 6.6 0 0 1 0 9.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="snd-x" d="m15 10 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><mask id="ls-tm-a"><rect x="-6" y="-6" width="36" height="36" fill="#fff"/><circle class="tm-cut" cx="28" cy="2" r="7" fill="#000"/></mask><circle class="tm-sun" cx="12" cy="12" r="5" fill="currentColor" mask="url(#ls-tm-a)"/><g class="tm-rays" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.6v2M12 19.4v2M2.6 12h2M19.4 12h2M5.4 5.4l1.4 1.4M17.2 17.2l1.4 1.4M5.4 18.6l1.4-1.4M17.2 6.8l1.4-1.4"/></g></svg></button></div>
+    <a class="btn btn-primary nav-cta" href="./get-started/" data-track="cta_nav"><span class="long">Book a 15-min call</span><span class="short">Book a call</span><svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <button class="nav-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu" id="menu" hidden>
+  <nav class="menu-links" aria-label="Menu">
+    <a href="./work/">Work<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#how">How we work<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="./about/">About<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </nav>
+  <div class="menu-foot">
+    <div class="menu-prefs"><span>Sound</span><button class="icon-btn icon-btn-lg sound-toggle" type="button" data-sound-toggle aria-pressed="false" aria-label="Turn sound on"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 9.5h2.8L11.5 6v12l-4.2-3.5H4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path class="snd-w1" d="M14.6 9.6a3.3 3.3 0 0 1 0 4.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="snd-w2" d="M17.1 7.3a6.6 6.6 0 0 1 0 9.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="snd-x" d="m15 10 4 4m0-4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button><span>Theme</span><button class="icon-btn icon-btn-lg theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode"><svg viewBox="0 0 24 24" aria-hidden="true"><mask id="ls-tm-b"><rect x="-6" y="-6" width="36" height="36" fill="#fff"/><circle class="tm-cut" cx="28" cy="2" r="7" fill="#000"/></mask><circle class="tm-sun" cx="12" cy="12" r="5" fill="currentColor" mask="url(#ls-tm-b)"/><g class="tm-rays" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2.6v2M12 19.4v2M2.6 12h2M19.4 12h2M5.4 5.4l1.4 1.4M17.2 17.2l1.4 1.4M5.4 18.6l1.4-1.4M17.2 6.8l1.4-1.4"/></g></svg></button></div>
+    <a class="btn btn-primary btn-lg" href="./get-started/" data-track="cta_menu">Book a 15-min scoping call<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p>Or email <a href="mailto:hello@latentship.com">hello@latentship.com</a></p>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero">
+    <div class="stars hero-stars" data-stars="60" aria-hidden="true"></div>
+    <div class="wrap hero-inner">
+      <a class="hero-pill" href="#how" data-in style="--in:0"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="4" width="14" height="13" rx="2.5" stroke="currentColor" stroke-width="1.6"/><path d="M3 8h14M7 2.5v3M13 2.5v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="m7.5 12.3 1.8 1.8 3.4-3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Proof of concept in 7 days<span class="go"><svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <h1 class="display hero-title" data-headline>
+        <span class="ln"><span style="--ln:0">AI products that</span></span> <span class="ln"><span style="--ln:1"><em class="scribble">actually<svg viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M3 8.5C40 3.5 92 2.6 132 4.6c22 1.1 42 3 65 5.6"/></svg></em> ship.</span></span>
+      </h1>
+      <script>(function(){var m=/[?&]h=(\d)/.exec(location.search),v=["<span class=\"ln\"><span style=\"--ln:0\">AI products that</span></span> <span class=\"ln\"><span style=\"--ln:1\"><em class=\"scribble\">actually<svg viewBox=\"0 0 200 12\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path pathLength=\"1\" d=\"M3 8.5C40 3.5 92 2.6 132 4.6c22 1.1 42 3 65 5.6\"/></svg></em> ship.</span></span>", "<span class=\"ln\"><span style=\"--ln:0\">Apps and AI agents</span></span> <span class=\"ln\"><span style=\"--ln:1\">people <em class=\"scribble\">actually<svg viewBox=\"0 0 200 12\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path pathLength=\"1\" d=\"M3 8.5C40 3.5 92 2.6 132 4.6c22 1.1 42 3 65 5.6\"/></svg></em> use.</span></span>", "<span class=\"ln\"><span style=\"--ln:0\">AI your team</span></span> <span class=\"ln\"><span style=\"--ln:1\">will <em class=\"scribble\">actually<svg viewBox=\"0 0 200 12\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path pathLength=\"1\" d=\"M3 8.5C40 3.5 92 2.6 132 4.6c22 1.1 42 3 65 5.6\"/></svg></em> use.</span></span>", "<span class=\"ln\"><span style=\"--ln:0\">Your idea, built</span></span> <span class=\"ln\"><span style=\"--ln:1\">and <em class=\"scribble\">actually<svg viewBox=\"0 0 200 12\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><path pathLength=\"1\" d=\"M3 8.5C40 3.5 92 2.6 132 4.6c22 1.1 42 3 65 5.6\"/></svg></em> shipped.</span></span>"];if(m&&v[+m[1]])document.querySelector('[data-headline]').innerHTML=v[+m[1]]})()</script>
+      <p class="lede hero-lede" data-in style="--in:3">Apps, AI agents and operations platforms, built around your real workflow. See it working in 7 days, then pay as each milestone ships.</p>
+      <div class="hero-cta" data-in style="--in:4">
+        <a class="btn btn-primary btn-lg" href="./get-started/" data-track="cta_hero">Book a 15-min scoping call<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost btn-lg" href="./work/" data-track="cta_hero_work">See our work</a>
       </div>
-    </header>
+      <p class="hero-fine" data-in style="--in:5"><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.2" stroke="currentColor" stroke-width="1.6"/><path d="M10 6v4.2l2.8 1.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Free 15-minute call</span><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 4 5v4.6c0 3.6 2.5 6.6 6 7.9 3.5-1.3 6-4.3 6-7.9V5l-6-2.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m7.4 10 1.8 1.8 3.5-3.6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>NDA on request</span><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Reviewed within 24&ndash;48 hours</span></p>
+    </div>
+    <div class="visual" data-visual aria-hidden="true"></div>
+  </section>
 
-    <main>
-      <section class="hero section">
-        <div class="container hero-grid">
-          <div class="hero-copy panel" data-reveal>
-            <p class="eyebrow" id="hero-eyebrow"></p>
-            <p class="hero-qualifier" id="hero-qualifier"></p>
-            <h1 id="hero-title"></h1>
-            <p class="subtitle" id="hero-subtitle"></p>
-            <ul id="hero-bullets" class="hero-bullets"></ul>
-            <div class="hero-actions">
-              <a href="./get-started/" class="primary-cta" data-track="cta_primary">Book a 15-min scoping call</a>
-              <a href="./work/" class="secondary-cta" data-track="cta_secondary">See recent builds</a>
-            </div>
+  <section class="proof" aria-label="Clients">
+    <p class="proof-label" data-reveal>Trusted to build for founders and operators at</p>
+    <div class="marquee" data-reveal="fade"><div class="marquee-track"><div class="marquee-group"><span class="wordmark">Xaurum Fintech</span><span class="wordmark">Thrive Ever</span><span class="wordmark">Aaroha Academy</span><span class="wordmark">Bilkool Ezee</span><span class="wordmark">DeepReflekt</span></div><div class="marquee-group" aria-hidden="true"><span class="wordmark">Xaurum Fintech</span><span class="wordmark">Thrive Ever</span><span class="wordmark">Aaroha Academy</span><span class="wordmark">Bilkool Ezee</span><span class="wordmark">DeepReflekt</span></div></div></div>
+  </section>
+
+  <section class="section" id="build">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>What we build</p>
+        <h2 class="h2" data-reveal>Four ways we put AI to work.</h2>
+        <p class="lede" data-reveal>Every one starts with a proof of concept on your real workflow, in about a week.</p>
+      </div>
+      <div class="caps" data-stagger="90">
+      <article class="cap" data-reveal>
+        <div class="cap-art"><svg viewBox="0 0 240 132" aria-hidden="true">
+  <g transform="rotate(-6 51 46)"><rect class="art-fill" x="24" y="38" width="54" height="16" rx="5"/><path class="art-line" d="M32 46h24" opacity=".5"/></g>
+  <g transform="rotate(4 52 66)"><rect class="art-fill" x="28" y="58" width="48" height="16" rx="5"/><path class="art-line" d="M36 66h18" opacity=".5"/></g>
+  <g transform="rotate(-3 50 86)"><rect class="art-fill" x="22" y="78" width="56" height="16" rx="5"/><path class="art-line" d="M30 86h28" opacity=".5"/></g>
+  <path class="art-soft" d="M82 66h16M142 66h18"/>
+  <circle class="art-soft art-dash" cx="120" cy="66" r="30"/>
+  <circle class="art-fill" cx="120" cy="66" r="22"/>
+  <path class="art-g" d="M120 54.5c.8 6 3.2 8.4 9.2 9.2-6 .8-8.4 3.2-9.2 9.2-.8-6-3.2-8.4-9.2-9.2 6-.8 8.4-3.2 9.2-9.2Z"/>
+  <rect class="art-fill" x="162" y="34" width="58" height="64" rx="10"/>
+  <circle class="art-g art-pop" style="--ad:.5s" cx="175" cy="51" r="4.5"/><path class="art-line" d="M186 51h22"/>
+  <circle class="art-g art-pop" style="--ad:.8s" cx="175" cy="66" r="4.5"/><path class="art-line" d="M186 66h18"/>
+  <circle class="art-g art-pop" style="--ad:1.1s" cx="175" cy="81" r="4.5"/><path class="art-line" d="M186 81h24"/>
+  <circle class="art-g" r="3.6"><animateMotion dur="3.2s" repeatCount="indefinite" path="M80 66H162" keyPoints="0;.5;.5;1" keyTimes="0;.38;.62;1" calcMode="linear"/></circle>
+</svg></div>
+        <h3 class="h3">AI agents &amp; automation</h3>
+        <p>Agents that read, route and act inside the workflow you already run, with a human signing off where it matters.</p>
+        <p class="cap-eg">See it in <a href="./work/orob-sync/">orob Sync</a></p>
+      </article>
+      <article class="cap" data-reveal>
+        <div class="cap-art"><svg viewBox="0 0 240 132" aria-hidden="true">
+  <rect class="art-fill" x="34" y="44" width="40" height="26" rx="8" opacity=".7"/><path class="art-line" d="M42 53h20M42 61h14" opacity=".45"/>
+  <rect class="art-fill" x="168" y="66" width="40" height="26" rx="8" opacity=".7"/><path class="art-line" d="M176 75h22M176 83h12" opacity=".45"/>
+  <rect class="art-fill" x="86" y="10" width="68" height="132" rx="15"/>
+  <rect class="art-faint" x="109" y="17" width="22" height="5" rx="2.5"/>
+  <rect class="art-pop art-tint" style="--ad:.15s" x="95" y="32" width="44" height="15" rx="7.5"/>
+  <rect class="art-pop art-strong" style="--ad:.6s" x="103" y="52" width="42" height="15" rx="7.5"/>
+  <rect class="art-pop art-tint" style="--ad:1.05s" x="95" y="72" width="50" height="24" rx="9"/>
+  <path class="art-pop art-line" style="--ad:1.05s" d="M101 80h30M101 88h20" opacity=".55"/>
+  <circle cx="154" cy="18" r="11" class="art-g"/>
+  <path d="M154 11.5c.45 3.3 1.75 4.6 5.05 5.05-3.3.45-4.6 1.75-5.05 5.05-.45-3.3-1.75-4.6-5.05-5.05 3.3-.45 4.6-1.75 5.05-5.05Z" fill="#fff"/>
+</svg></div>
+        <h3 class="h3">Apps &amp; AI products</h3>
+        <p>Web and mobile apps with AI built in, from the first users to paying subscribers.</p>
+        <p class="cap-eg">See it in <a href="./work/thrive-ever/">Thrive Ever</a></p>
+      </article>
+      <article class="cap" data-reveal>
+        <div class="cap-art"><svg viewBox="0 0 240 132" aria-hidden="true">
+  <rect class="art-fill" x="26" y="16" width="188" height="122" rx="11"/>
+  <path class="art-faint-line" d="M26 32h188"/>
+  <circle class="art-faint" cx="37" cy="24" r="2.6"/><circle class="art-faint" cx="45" cy="24" r="2.6"/><circle class="art-faint" cx="53" cy="24" r="2.6"/>
+  <path class="art-panel" d="M26 32h36v106H37a11 11 0 0 1-11-11V32Z"/>
+  <path class="art-line" d="M34 46h18M34 58h14M34 70h20" opacity=".4"/>
+  <rect x="34" y="80" width="20" height="7" rx="3.5" class="art-g" opacity=".7"/>
+  <path class="art-line" d="M74 46h50" opacity=".55"/>
+  <path class="art-faint-line" d="M74 120h128"/>
+  <rect class="art-bar art-g3" style="--ad:0s" x="78" y="76" width="13" height="44" rx="3"/>
+  <rect class="art-bar art-g4" style="--ad:.12s" x="100" y="62" width="13" height="58" rx="3"/>
+  <rect class="art-bar art-g3" style="--ad:.24s" x="122" y="86" width="13" height="34" rx="3"/>
+  <rect class="art-bar art-g6" style="--ad:.36s" x="144" y="54" width="13" height="66" rx="3"/>
+  <rect class="art-bar art-g4" style="--ad:.48s" x="166" y="70" width="13" height="50" rx="3"/>
+  <rect x="160" y="40" width="44" height="14" rx="7" class="art-strong"/><path d="M168 47h22" stroke="#b1e17b" stroke-width="1.8" stroke-linecap="round"/>
+</svg></div>
+        <h3 class="h3">Operations platforms</h3>
+        <p>The internal tools your team lives in: pricing, orders, approvals, ledgers and dashboards.</p>
+        <p class="cap-eg">See it in <a href="./work/orob-desk/">orob Desk</a></p>
+      </article>
+      <article class="cap" data-reveal>
+        <div class="cap-art"><svg viewBox="0 0 240 132" aria-hidden="true">
+  <ellipse class="art-fill" cx="48" cy="44" rx="20" ry="7"/>
+  <path class="art-fill" d="M28 44v42c0 3.9 9 7 20 7s20-3.1 20-7V44c0 3.9-9 7-20 7s-20-3.1-20-7Z"/>
+  <path class="art-line" d="M28 58c0 3.9 9 7 20 7s20-3.1 20-7M28 72c0 3.9 9 7 20 7s20-3.1 20-7" opacity=".45"/>
+  <path class="art-line art-dash" d="M74 66h24M142 66h24"/>
+  <path class="art-fill" d="M120 38 99 46v15c0 13 9 23 21 27 12-4 21-14 21-27V46l-21-8Z"/>
+  <rect x="112" y="60" width="16" height="13" rx="3" class="art-g"/>
+  <path d="M115 60v-4a5 5 0 0 1 10 0v4" fill="none" stroke-width="2" class="art-line"/>
+  <rect class="art-fill" x="168" y="44" width="50" height="40" rx="12"/>
+  <path class="art-g" d="M193 54c.6 4.5 2.4 6.3 6.9 6.9-4.5.6-6.3 2.4-6.9 6.9-.6-4.5-2.4-6.3-6.9-6.9 4.5-.6 6.3-2.4 6.9-6.9Z"/>
+  <path class="art-fill" d="M178 84l-5 9 12-9" stroke-linejoin="round"/>
+  <circle class="art-g" r="3.4"><animateMotion dur="2.6s" repeatCount="indefinite" path="M74 66H166"/></circle>
+</svg></div>
+        <h3 class="h3">Secure AI integrations</h3>
+        <p>MCP servers that give ChatGPT, Claude or your own agents safe, audited access to your data.</p>
+        <p class="cap-eg">See it in <a href="./work/mcp-development/">our MCP layer</a></p>
+      </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why" style="padding-top:0">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Why LatentShip</p>
+        <h2 class="h2" data-reveal>Hiring a dev shop shouldn&rsquo;t feel like a gamble.</h2>
+        <p class="lede" data-reveal>You&rsquo;ve heard the stories. Here&rsquo;s what usually goes wrong, and what we do instead.</p>
+      </div>
+      <div class="diff" data-diff>
+        <div class="diff-row diff-head" aria-hidden="true"><span>The usual way</span><span>The LatentShip way</span></div>
+      <div class="diff-row">
+        <p class="diff-old"><span class="diff-x"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="txt">Pay a big chunk upfront and hope it works out.</span></p>
+        <p class="diff-new"><span class="diff-ok"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Pay per milestone, after you&rsquo;ve seen it work.</span></p>
+      </div>
+      <div class="diff-row">
+        <p class="diff-old"><span class="diff-x"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="txt">Wait months to see anything real.</span></p>
+        <p class="diff-new"><span class="diff-ok"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>See it working in 7 days.</span></p>
+      </div>
+      <div class="diff-row">
+        <p class="diff-old"><span class="diff-x"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="txt">A slick demo that breaks on real data.</span></p>
+        <p class="diff-new"><span class="diff-ok"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Built on your real workflow from day one.</span></p>
+      </div>
+      <div class="diff-row">
+        <p class="diff-old"><span class="diff-x"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="txt">Weeks of silence, then a surprise.</span></p>
+        <p class="diff-new"><span class="diff-ok"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>One point of contact, and a demo every week.</span></p>
+      </div>
+      <div class="diff-row">
+        <p class="diff-old"><span class="diff-x"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="txt">AI-generated code nobody tested or secured.</span></p>
+        <p class="diff-new"><span class="diff-ok"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Security, testing and performance, built in.</span></p>
+      </div>
+      <div class="diff-row">
+        <p class="diff-old"><span class="diff-x"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m6 6 8 8m0-8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="txt">Your code, held hostage.</span></p>
+        <p class="diff-new"><span class="diff-ok"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Your code, in your own repository.</span></p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="journey" id="how" data-journey data-night>
+    <div class="journey-pin">
+      <div class="journey-sky"><div class="stars" data-stars="90"></div></div>
+      <div class="wrap journey-grid">
+        <header class="journey-head">
+          <div>
+            <p class="eyebrow">How we work</p>
+            <h2 class="h2" style="margin-top:16px">See it work before you pay for it.</h2>
           </div>
-
-          <aside class="hero-card panel panel-dark" data-reveal>
-            <p class="meta" id="hero-card-meta"></p>
-            <h2 id="hero-card-title"></h2>
-            <ul id="hero-timeline" class="hero-timeline"></ul>
-            <div class="bars" aria-hidden="true">
-              <span class="bar b1"></span>
-              <span class="bar b2"></span>
-              <span class="bar b3"></span>
-            </div>
-          </aside>
+          <p class="lede">Proof in a week. Production in weeks. Paid by milestone, so the risk never sits with you alone.</p>
+        </header>
+        <div class="track" data-jtrack aria-hidden="true">
+          <svg class="track-path"><path class="base"/><path class="done"/></svg>
+          <div class="stop" data-stop="0"><span class="stop-dot"></span><span class="stop-label">Week 1<br>Proof</span></div>
+          <div class="stop" data-stop="1"><span class="stop-dot"></span><span class="stop-label">Weeks 2&ndash;8<br>Build</span></div>
+          <div class="stop" data-stop="2"><span class="stop-dot"></span><span class="stop-label">Then<br>Launch</span></div>
+          <div class="track-rocket" data-jrocket data-rocket="lit"></div>
         </div>
-      </section>
-
-      <section class="section section-tight">
-        <div class="container proof-strip panel" data-reveal>
-          <p id="proof-title"></p>
-          <div id="proof-badges" class="proof-badges"></div>
-        </div>
-      </section>
-
-      <section class="section" id="why-us">
-        <div class="container panel why-panel" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow">Why us</p>
-            <h2>Short, concrete reasons teams trust us.</h2>
-          </div>
-          <ul id="why-us-list" class="why-list"></ul>
-        </div>
-      </section>
-
-      <section class="section" id="mcp-capability">
-        <div class="container panel panel-dark mcp-panel" data-reveal>
-          <div class="mcp-content">
-            <div class="mcp-copy">
-              <p class="eyebrow mcp-eyebrow">MCP Capability</p>
-              <h2>Connect your internal tools and data to AI workflows.</h2>
-              <p class="lead mcp-lead">
-                We build custom MCP servers that let approved AI assistants query business data,
-                generate reports, and trigger safe internal actions.
-              </p>
-              <ul class="mcp-features">
-                <li>
-                  <span class="mcp-feature-icon" aria-hidden="true">01</span>
-                  <div>
-                    <strong>Secure tool layer</strong>
-                    <span>Auth, routing, guardrails, and audit logs between your systems and AI tools.</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="mcp-feature-icon" aria-hidden="true">02</span>
-                  <div>
-                    <strong>Fits existing AI workflows</strong>
-                    <span>Connect data and tools to ChatGPT, Codex, or internal agent interfaces.</span>
-                  </div>
-                </li>
-                <li>
-                  <span class="mcp-feature-icon" aria-hidden="true">03</span>
-                  <div>
-                    <strong>Built for internal operations</strong>
-                    <span>Admin dashboard snapshots, usage reports, internal workflow tools, and safe action execution.</span>
-                  </div>
-                </li>
-              </ul>
-              <div class="mcp-actions">
-                <a href="./get-started/" class="primary-cta mcp-cta" data-track="cta_mcp">Explore MCP for your team</a>
-              </div>
-            </div>
-            <div class="mcp-diagram-wrap">
-              <img src="./assets/LatentShip_MCP_Image.png" alt="MCP Architecture: Internal systems to Secure MCP layer to MCP tools to AI assistants to business outcomes" loading="lazy" class="mcp-diagram-img" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="roadmap">
-        <div class="container" data-reveal>
-          <div class="section-head">
-            <p class="eyebrow">Delivery roadmap</p>
-            <h2 id="roadmap-title"></h2>
-            <p class="lead" id="roadmap-subtitle"></p>
-            <p class="collab-note" id="roadmap-collaboration"></p>
-          </div>
-          <div class="roadmap-stage">
-            <div class="stage-top">
-              <span class="slot-note" id="roadmap-stage-note"></span>
-            </div>
-            <div id="roadmap-steps" class="roadmap-grid timeline-grid"></div>
-          </div>
-          <div id="trust-cards" class="trust-grid"></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container" data-reveal>
-          <div class="section-head inline-head">
+        <div class="panels">
+          <article class="panel is-on" data-panel="0">
             <div>
-              <p class="eyebrow">Recent builds</p>
-              <h2>Case snapshots with outcomes</h2>
+              <p class="panel-when">Week 1 &middot; Proof of concept</p>
+              <h3>See it working, on your real workflow.</h3>
+              <p>We pick the workflow that matters most, agree what success looks like and build it end to end in about a week. Not a slide. Not a mockup.</p>
             </div>
-            <a class="text-link-cta" href="./work/" data-track="cta_secondary">View all projects</a>
-          </div>
-          <div id="featured-project-grid" class="project-grid" data-project-link-prefix="./work/"></div>
+            <dl>
+              <div><dt>You get</dt><dd><span class="chip">Scope brief</span><span class="chip">Working proof of concept</span><span class="chip">Go / no-go call</span></dd></div>
+              <div><dt>You pay</dt><dd class="pay"><strong>Free</strong> if it fits in a week, or a <strong>small fixed fee</strong> agreed upfront. Not convinced? We part ways, no strings.</dd></div>
+            </dl>
+          </article>
+          <article class="panel" data-panel="1">
+            <div>
+              <p class="panel-when">Weeks 2&ndash;8 &middot; MVP build</p>
+              <h3>From proof to production, one milestone at a time.</h3>
+              <p>We harden the proof into a launch-ready product with real architecture, tests and CI. You see it every week, and every decision goes in a shared log.</p>
+            </div>
+            <dl>
+              <div><dt>You get</dt><dd><span class="chip">Weekly demos</span><span class="chip">Decision log</span><span class="chip">Tests + CI</span><span class="chip">Deploy-ready</span></dd></div>
+              <div><dt>You pay</dt><dd class="pay">A <strong>kickoff fee</strong>, then <strong>per milestone</strong>, and only once you&rsquo;ve accepted it.</dd></div>
+            </dl>
+          </article>
+          <article class="panel" data-panel="2">
+            <div>
+              <p class="panel-when">Launch &middot; then iterate</p>
+              <h3>Launch, measure, keep shipping.</h3>
+              <p>We launch with QA and monitoring, then improve from how people actually use it. The code has been yours, in your own repository, since day one.</p>
+            </div>
+            <dl>
+              <div><dt>You get</dt><dd><span class="chip">Release support</span><span class="chip">Monitoring</span><span class="chip">Prioritized roadmap</span></dd></div>
+              <div><dt>You pay</dt><dd class="pay">An <strong>optional retainer</strong>. Or take the code and run with it.</dd></div>
+            </dl>
+          </article>
         </div>
-      </section>
-
-      <section class="section" id="faq">
-        <div class="container panel faq-shell" data-reveal>
-          <div class="faq-left">
-            <p class="eyebrow">FAQ</p>
-            <h2>Common questions before we build.</h2>
-            <p class="lead">
-              We keep intake lightweight, scope concrete, and implementation grounded in real user workflows.
-            </p>
-            <ul class="call-list">
-              <li>15-minute scope call</li>
-              <li>Practical AI workflow scoping</li>
-              <li>NDA-friendly process</li>
-            </ul>
-            <a href="./get-started/" class="text-link-cta" data-track="cta_secondary">Contact us</a>
-          </div>
-          <div id="faq-list" class="faq-list faq-right"></div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="section" id="contact">
-      <div class="container">
-        <div class="footer-cta panel-dark" data-reveal>
-          <h2>Ready to ship your next product?</h2>
-          <a href="./get-started/" class="footer-cta-link" data-track="cta_primary">Book a 15-min scoping call</a>
-          <p class="footer-subline">Response within 1 business day.</p>
-        </div>
-        <div class="footer-grid panel" data-reveal>
-          <div>
-            <p class="footer-label">Company</p>
-            <p class="footer-brand">LatentShip</p>
-            <p class="footer-copy">
-              AI-native product + engineering team focused on practical, production-minded delivery.
-            </p>
-          </div>
-          <div>
-            <p class="footer-label">Contact</p>
-            <p>hello@latentship.com</p>
-          </div>
-          <div>
-            <p class="footer-label">Model</p>
-            <p>POC -> MVP -> Launch + Iterate</p>
-            <p>Source code ownership. Optional retainer.</p>
-          </div>
+        <div class="journey-foot">
+          <div class="rhythm"><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Weekly demos</span><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Shared decision log</span><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Fixed price per milestone</span><span><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Your code, your repository</span></div>
+          <a class="btn btn-night" href="./get-started/" data-track="cta_journey">Start with a proof of concept<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <script src="./js/content.js" defer></script>
-    <script src="./js/main.js" defer></script>
-  </body>
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow" data-reveal>Recent work</p>
+        <h2 class="h2" data-reveal>Shipped, not demoed.</h2>
+        <p class="lede" data-reveal>Products in production for founders, fintechs and operations teams.</p>
+      </div>
+      <div class="work-grid" data-featured></div>
+      <div class="work-more"><a class="btn btn-ghost btn-lg" href="./work/" data-track="cta_all_work">See all work<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="wrap faq-wrap">
+      <div class="faq-side">
+        <p class="eyebrow" data-reveal>FAQ</p>
+        <h2 class="h2" data-reveal>Straight answers.</h2>
+        <p class="lede" data-reveal>The questions we hear on every first call. Anything else, ask us directly.</p>
+        <a class="btn btn-dark" href="./get-started/" data-reveal data-track="cta_faq">Book a 15-min call<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="faq" data-faq></div>
+    </div>
+  </section>
+</main>
+<section class="end" data-night>
+  <div class="stars" data-stars="70"></div>
+  <div class="end-cta">
+    <div class="end-rocket" data-rocket="idle" data-end-rocket></div>
+    <h2 class="h2" data-reveal>Got a messy workflow? Let&rsquo;s ship it.</h2>
+    <p class="lede" data-reveal>Fifteen minutes, no pitch deck. You&rsquo;ll leave knowing exactly what we&rsquo;d build first.</p>
+    <div class="end-actions" data-reveal>
+      <a class="btn btn-primary btn-lg" href="./get-started/" data-launch data-track="cta_footer">Book a 15-min scoping call<svg class="ico ico-arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m0 0-4.5-4.5M15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn-night btn-lg" href="mailto:hello@latentship.com"><svg class="ico" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="14" height="11" rx="2.2" stroke="currentColor" stroke-width="1.6"/><path d="m3.5 6 6.5 5 6.5-5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>hello@latentship.com</a>
+    </div>
+    <p class="end-fine" data-reveal>Free call &middot; NDA on request &middot; Every intake reviewed within 24&ndash;48 hours</p>
+  </div>
+  <footer class="foot">
+    <div>
+      <a class="brand" href="./" aria-label="LatentShip home"><span class="brand-mark"><span class="brand-ring"></span><svg class="rocket" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g transform="translate(6.2 17.9) rotate(45)"><g class="rk-flame"><path class="rk-flame-glow" d="M-3.7 0C-3.7 4.1-1.7 9.2 0 14.4 1.7 9.2 3.7 4.1 3.7 0 3.7-2.7-3.7-2.7-3.7 0Z"/><path class="rk-flame-outer" d="M-2.8 0C-2.8 3.4-1.3 7.6 0 11.6 1.3 7.6 2.8 3.4 2.8 0 2.8-2.2-2.8-2.2-2.8 0Z"/><path class="rk-flame-mid" d="M-1.9 0C-1.9 2.4-.9 5.2 0 8.1.9 5.2 1.9 2.4 1.9 0 1.9-1.5-1.9-1.5-1.9 0Z"/><path class="rk-flame-core" d="M-1 0C-1 1.4-.45 3 0 4.7.45 3 1 1.4 1 0 1-.8-1-.8-1 0Z"/></g></g><path class="rk-puff" d="M6.517 17.569c-1.157-1.145-3.364-.909-4.379.121-1.132 1.149-1.008 3.87-.959 4.381.046.483.432.863.916.902.13.01 3.028.294 4.356-1.019.97-1.049 1.218-3.185.066-4.386Z"/><path class="rk-glass" d="M12.071 11.958l-.029-.029c-1.636-1.662-.703-3.106 0-3.82.611-.62 2.095-1.71 3.805 0 1.649 1.649.703 3.106 0 3.82-.61.62-2.05 1.755-3.776.029Z"/><path class="rk-fin" d="M2.206 9.034 6.847 4.32c.45-.457.904-.877 1.359-1.262-1.382-.48-2.856-.22-3.73.192-1.688.795-2.935 2.844-3.072 3.075-.075.127-.121.268-.135.415-.021.215-.129 1.627.358 3.012.167-.255.36-.495.578-.717Z"/><path class="rk-fin" d="M20.638 19.608c.402-.881.642-2.367.172-3.762-.364.44-.76.88-1.189 1.316l-4.641 4.715c-.233.237-.488.445-.759.624 1.365.49 2.751.386 2.964.366.151-.014.298-.062.428-.142.227-.138 2.245-1.405 3.026-3.117Z"/><path class="rk-body" d="M18.196 15.759c6.363-6.464 4.385-13.443 4.298-13.737-.097-.323-.348-.576-.67-.672-.291-.088-7.207-2.073-13.552 4.372l-4.641 4.714c-.63.641-.9 1.553-.719 2.44.175.862.755 1.576 1.557 1.908 1.154.479 2.107 1.101 2.896 1.896.768.78 1.353 1.791 1.869 2.95 1.041 2.336 3.666 1.747 4.321.844l4.641-4.715Zm-6.125-3.801-.029-.029c-1.636-1.662-.703-3.106 0-3.82.611-.62 2.095-1.71 3.805 0 1.649 1.649.703 3.106 0 3.82-.61.62-2.05 1.755-3.776.029Z"/></svg></span><span class="brand-name">LatentShip</span></a>
+      <p>A founder-led AI product studio. We build AI products that actually ship.</p>
+    </div>
+    <div><h4>Explore</h4><ul><li><a href="./work/">Work</a></li><li><a href="./#how">How we work</a></li><li><a href="./about/">About</a></li></ul></div>
+    <div><h4>Start</h4><ul><li><a href="./get-started/">Book a scoping call</a></li><li><a href="mailto:hello@latentship.com">hello@latentship.com</a></li></ul></div>
+    <div><h4>The model</h4><ul><li>Proof of concept in 7 days</li><li>Milestone billing</li><li>Your code, your repository</li></ul></div>
+    <div class="foot-base"><span>&copy; <span data-year>2026</span> LatentShip</span><span class="mono">proof &rarr; build &rarr; launch &rarr; iterate</span></div>
+  </footer>
+</section>
+</body>
 </html>

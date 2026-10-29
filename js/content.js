@@ -1,414 +1,426 @@
-window.SITE_CONTENT = {
-  hero: {
-    eyebrow: "AI-native product + engineering team",
-    qualifier: "AI-agentic workflow builders for operations-heavy teams.",
-    title: "We turn messy workflows into AI-agentic products teams actually use.",
-    subtitle:
-      "We map business friction into practical AI systems with clear UX, automation, and production-ready delivery.",
-    bullets: ["Custom AI agents, workflow automation, and maintainable handoff-ready builds."],
-    cardMeta: "POC -> MVP -> Launch + Iterate",
-    cardTitle: "Scoped proof for a critical flow, then production-ready MVP delivery.",
-    timeline: [
-      { label: "Week 1", text: "Scoped proof for a critical workflow" },
-      { label: "Weeks 2+", text: "MVP build with production foundations" },
-      { label: "Launch", text: "Release, instrument, and iterate from usage" } // launch label
-    ]
+/*
+ * Site content: projects, FAQ, the about page docs and the intake.
+ * Edit words here; the pages read from this file.
+ */
+
+export const site = {
+  email: "hello@latentship.com",
+  // Set to a Cal.com or Calendly link to let people pick a time right after the intake.
+  bookingUrl: "",
+  lead: {
+    endpoint: "https://api.latentship.com",
+    source: "latentship-site",
+    turnstileSiteKey: "0x4AAAAAADO9Pzc1GtX8YPo3",
+    turnstileAction: "lead_intake_submit",
   },
-  socialProof: {
-    title: "Selected work across:",
-    badges: ["AI Systems", "Agentic Workflows", "Operational Platforms", "FinTech", "EdTech", "Internal Tools"]
-  },
-  whyUs: [
-    { title: "AI where it helps", detail: "We apply AI to concrete workflow bottlenecks, not generic demos." },
-    {
-      title: "Human-in-the-loop",
-      detail: "Critical decisions stay visible with controllable prompts, guardrails, and review points."
-    },
-    {
-      title: "Production-minded architecture",
-      detail: "We build for maintainability, observability, and clean handoff from day one."
-    },
-    { title: "Fast scoped validation", detail: "A focused POC reduces risk before broader product investment." },
-    { title: "Clear ownership + handoff", detail: "You keep repos and implementation context without lock-in." },
-    {
-      title: "Workflow-first thinking",
-      detail: "We design around real operations, then layer automation where it creates leverage."
-    }
-  ],
-  roadmap: {
-    title: "POC first, production build next, then measured iteration.",
-    subtitle:
-      "We translate ambiguous workflow problems into scoped product decisions and reliable delivery plans.",
-    collaboration:
-      "Weekly demos, shared decision logs, and explicit acceptance criteria keep execution transparent.",
-    stageNote: "Typical MVP build: 3-6 weeks depending on scope and integrations",
-    steps: [
-      {
-        phase: "Step 1",
-        title: "POC in ~7 Days (Scoped)",
-        timeline: "~1 week",
-        detail:
-          "We isolate the highest-leverage workflow, define success criteria, and ship a working proof to validate direction.",
-        deliverables: ["Scope brief", "Working flow proof", "Go/no-go recommendation"]
-      },
-      {
-        phase: "Step 2",
-        title: "MVP Build (Production Baseline)",
-        timeline: "Typical 3-6 weeks",
-        detail:
-          "We harden validated scope into a launch-ready MVP with maintainable architecture, tests, and deployment readiness.",
-        deliverables: ["Core product workflows", "Testing + CI baseline", "Deployment-ready setup"]
-      },
-      {
-        phase: "Step 3",
-        title: "Launch + Iterate",
-        timeline: "Ongoing",
-        detail:
-          "We launch with QA and monitoring, then prioritize iteration from real user behavior and operational feedback.",
-        deliverables: ["Release support", "Usage feedback loop", "Prioritized iteration backlog"]
-      }
+};
+
+export const categories = [
+  { id: "fintech", label: "Fintech" },
+  { id: "learning", label: "Learning & growth" },
+  { id: "operations", label: "Operations" },
+  { id: "infra", label: "AI infrastructure" },
+];
+
+/*
+ * Each project:
+ *   media: { vignette } draws a live sketch of the product, or
+ *          { shots: [...] } shows screenshots from assets/img/work/<slug>/<n>-*.
+ *   highlight: the AI (or automation) moment worth calling out.
+ */
+export const projects = [
+  {
+    slug: "thrive-ever",
+    chip: "AI companion + simulations",
+    name: "Thrive Ever",
+    client: "Thrive Ever",
+    category: "learning",
+    kind: "AI product",
+    tagline: "An AI growth companion that remembers you.",
+    summary:
+      "A mobile-first personal development platform. Behavioral assessments, a personal archetype and growth profile, an AI companion with memory, and role-play simulations for hard conversations.",
+    problem:
+      "The founder had a validated idea and a working concept. They needed it turned into a real subscription product, without cutting corners on privacy, accessibility or AI quality.",
+    built: [
+      "Assessments and scoring that produce a personal archetype and growth profile",
+      "A streaming AI companion that carries context from one day to the next",
+      "Role-play simulations for hard conversations, with scored debriefs",
+      "Habits, progress, a free trial and subscriptions",
+      "A founder admin panel to change content, scoring and prompts without a deploy",
     ],
-    trustCards: [
-      {
-        label: "Validation model",
-        heading: "Scoped POC First",
-        copy: "Start narrow, validate quickly, and invest with more confidence in product direction."
-      },
-      {
-        label: "Execution model",
-        heading: "Clear Operating Rhythm",
-        copy: "Weekly demos, async updates, and tracked decisions keep progress and tradeoffs explicit."
-      },
-      {
-        label: "Handoff model",
-        heading: "Production Handoff",
-        copy: "Code ownership, runbooks, architecture notes, and practical transition support are built in."
-      }
-    ]
+    highlight: {
+      label: "AI inside",
+      text: "Simulations run on several AI agents working together, and every debrief is scored against the client's own rubric. Cost and quality are tracked per conversation from day one.",
+    },
+    outcome:
+      "It started the way we start everything: a one-week prototype, sign-up to assessment to results, working end to end. Then the full build, milestone by milestone.",
+    duration: "1-week prototype, then phased build",
+    media: { vignette: "thrive", tint: "#0b0b14", dark: true },
   },
-  projects: [
-    {
-      slug: "aaroha-academy",
-      title: "Aaroha Academy",
-      industry: "AI Systems",
-      summary:
-        "AI-enabled learning and coaching platform with role-based workspaces, track management, streaming coach interactions, transcription, and privacy-aware learner support.",
-      detail:
-        "An education and coaching platform that combines structured learning operations with an AI coach layer, including streaming responses, transcription, image-aware context, diagnostics, and admin-level prompt control.",
-      whatWeDid: [
-        "Role-based workspaces and learning operations control planes",
-        "Streaming AI coach interactions with transcription workflows",
-        "Prompt diagnostics, privacy-aware handling, and admin tooling"
-      ],
-      outcome: "Delivered a stronger coaching experience with operational clarity for learners and admins.",
-      posterLine: "AI coach + structured learning operations",
-      duration: "6 weeks",
-      tags: ["AI Systems", "EdTech"],
-      deliverables: [
-        "Track and workspace management flows",
-        "Streaming coach layer with transcript support",
-        "Admin diagnostics and prompt control interfaces"
-      ],
-      preview: "linear-gradient(140deg, #0e1729 0%, #4b67a4 40%, #b5e67a 100%)"
+  {
+    slug: "orob-desk",
+    chip: "AI hedging alerts",
+    name: "orob Desk",
+    client: "Xaurum Fintech",
+    family: "orob",
+    category: "fintech",
+    kind: "Trading platform",
+    tagline: "Your rates. Your brand. Your desk.",
+    summary:
+      "A white-label trading platform for bullion dealers. Their own branded website and app stream live rates, take customer orders and keep the book, all hosted and run for them.",
+    problem:
+      "Bullion desks ran on phone calls, spreadsheets and legacy tools. Rates changed by the second, and every order had to be priced, limit-checked, confirmed and invoiced by hand.",
+    built: [
+      "Live rate streaming to a branded website and app",
+      "A price formula engine: premiums and markups on MCX or spot, per customer group",
+      "Market, limit and stop orders, confirmed on the dealing desk",
+      "Customer limits checked on every order",
+      "Invoicing, ledgers and a real-time risk and MTM monitor",
+    ],
+    highlight: {
+      label: "AI inside",
+      text: "Intelligent hedging watches the open position as orders land and alerts the dealer when exposure crosses their thresholds. Nothing is placed without their confirmation.",
     },
-    {
-      slug: "algobullion",
-      title: "AlgoBullion",
-      industry: "FinTech",
-      summary:
-        "Real-time bullion trading and pricing platform for dealer workflows, combining live market visibility, tenant-aware pricing, and trading operations.",
-      detail:
-        "Built for bullion wholesalers and dealers who need live pricing visibility, SKU-level rate configuration, multi-tenant controls, and a stronger digital trading workflow than legacy tools provide.",
-      whatWeDid: [
-        "Live rates ingestion with dealer-facing visibility surfaces",
-        "SKU-level pricing and tenant-aware controls",
-        "Trading operations workflows for desk and order teams"
-      ],
-      outcome: "Improved responsiveness and pricing control in high-velocity bullion workflows.",
-      posterLine: "Live pricing + trading desk control",
-      duration: "5 weeks",
-      tags: ["FinTech", "Operational Platforms"],
-      deliverables: [
-        "Dealer/trader market visibility interfaces",
-        "Rate configuration and control panels",
-        "Order and trading workflow operations"
-      ],
-      preview: "linear-gradient(140deg, #13211c 0%, #224d3f 45%, #a5dd63 100%)"
+    outcome: "Dealers go live in three steps (brand, rates, customers) on a platform that's built, hosted and kept running for them.",
+    link: "https://xaurum.in/orob-desk",
+    media: { vignette: "desk", tint: "#0d1526", dark: true },
+  },
+  {
+    slug: "orob-sync",
+    chip: "AI bookkeeping",
+    name: "orob Sync",
+    client: "Xaurum Fintech",
+    family: "orob",
+    category: "fintech",
+    kind: "Accounting integration",
+    tagline: "Your Tally, in the cloud.",
+    summary:
+      "Connects the Tally Prime books a business already keeps to the cloud and keeps them in sync, so the accounts team never keys an entry in twice.",
+    problem:
+      "Accounts lived on one office PC. Getting a balance meant a phone call, and every invoice and bill was typed in by hand.",
+    built: [
+      "A connector for existing Tally Prime companies, with no migration",
+      "Vouchers and ledgers synced to the cloud continuously, in the background",
+      "Balances, ledgers and outstanding amounts from any browser",
+    ],
+    highlight: {
+      label: "AI inside",
+      text: "Intelligent bookkeeping reads invoices and bills, drafts the matching voucher against the right ledgers, and holds anything that doesn't add up for the accountant to review.",
     },
-    {
-      slug: "bilkool-ezee",
-      title: "Bilkool Ezee",
-      industry: "Operational Platforms",
-      summary:
-        "Procurement operations platform for branded merchandise, bringing ordering, shipment visibility, invoicing, and supplier coordination into one workflow.",
-      detail:
-        "Built to reduce the back-and-forth across vendor requests, approvals, order tracking, and invoicing by centralizing procurement operations in one platform.",
-      whatWeDid: [
-        "Quote, approval, and order workflow orchestration",
-        "Shipment visibility and compliant invoicing operations",
-        "WhatsApp-native supplier coordination pathways"
-      ],
-      outcome: "Reduced operational back-and-forth and improved quote-to-order execution.",
-      posterLine: "Unified procurement operations workflow",
-      duration: "8 weeks",
-      tags: ["Operational Platforms"],
-      deliverables: [
-        "Self-service procurement ordering flow",
-        "Approval and order movement dashboards",
-        "Invoice and shipment visibility controls"
-      ],
-      preview: "linear-gradient(140deg, #b5e67a 0%, #d7f2ae 46%, #0f1218 100%)"
+    outcome: "Connected in an afternoon. The accountant keeps working in Tally; the double entry goes away.",
+    link: "https://xaurum.in/orob-sync",
+    media: { vignette: "sync", tint: "#0d1526", dark: true },
+  },
+  {
+    slug: "orob",
+    chip: "AI market notes",
+    name: "orob",
+    client: "Xaurum Fintech",
+    family: "orob",
+    category: "fintech",
+    kind: "Mobile app",
+    tagline: "Know the best rate first.",
+    summary:
+      "An AI-based and self-healing price aggregating engine for jewellers and bullion buyers. It compares live gold and silver rates across bullions, with short AI notes on what's moving the market.",
+    problem:
+      "Buyers rang round bullions or flicked between WhatsApp groups to find a rate, and by the time they had compared, the market had moved.",
+    built: [
+      "Live gold and silver rates from bullions nearby, updating as they change",
+      "The best quote for the product you're watching, always on top",
+      "Native apps for iOS and Android",
+    ],
+    highlight: {
+      label: "AI inside",
+      text: "Market-mover updates: short, timely notes on what's moving gold and silver, so buyers know why before they buy.",
     },
-    {
-      slug: "deepreflekt",
-      title: "DeepReflekt",
-      industry: "Coaching",
-      summary:
-        "Leadership coaching platform centered on reflection capture, collaborative coaching workflows, and AI-assisted insight generation.",
-      detail:
-        "Built to support structured leadership development through recurring reflections, coaching continuity, and insight generation across coach and leader workflows.",
-      whatWeDid: [
-        "Recurring reflection capture and coaching continuity loops",
-        "Collaborative coach-leader workflow design",
-        "AI-assisted insight and summary generation"
-      ],
-      outcome: "Improved continuity across coaching cycles and leadership development touchpoints.",
-      posterLine: "Reflection-led coaching continuity",
-      duration: "7 weeks",
-      tags: ["AI Systems", "Coaching"],
-      deliverables: [
-        "Reflection capture and timeline workflows",
-        "Coach collaboration experience",
-        "Insight summary surfaces for ongoing sessions"
-      ],
-      preview: "linear-gradient(140deg, #101012 0%, #3a3a55 42%, #9fd957 100%)"
+    outcome: "On the App Store and Google Play, and the front door to the orob family.",
+    link: "https://xaurum.in/orob/",
+    media: { vignette: "rates", tint: "#0d1526", dark: true },
+  },
+  {
+    slug: "aaroha-academy",
+    chip: "Streaming AI coach",
+    name: "Aaroha Academy",
+    client: "Aaroha Academy",
+    category: "learning",
+    kind: "AI learning platform",
+    tagline: "Leadership learning, with an AI coach on call.",
+    summary:
+      "A multi-company learning and coaching platform: structured leadership modules and assessments, plus an always-on AI coach for real situations at work.",
+    problem:
+      "Coaching didn't scale past the sessions. Learners needed support in the moment, and admins needed to run modules for many companies without engineering help.",
+    built: [
+      "Role-based workspaces for learners, coaches and admins",
+      "Modules, tracks and assessments, configured per company",
+      "A streaming AI coach with transcription and image-aware context",
+      "Prompt settings and live coach diagnostics for admins",
+    ],
+    highlight: {
+      label: "AI inside",
+      text: "The coach runs on admin-controlled prompts with privacy-aware handling, and a diagnostics view shows success rate, latency and errors, so the team can see exactly how it's performing.",
     },
-    {
-      slug: "rewards-loyalty-program",
-      title: "Rewards & Loyalty Program",
-      industry: "AgriTech",
-      summary:
-        "Geo-aware rewards program and loyalty campaign, with field engagement flows and redemption controls for a large agri seeds business.",
-      detail:
-        "Rewards and loyalty campaign for a large agri seeds business, built around field engagement journeys, location-aware validation, and stronger redemption controls across dealer and farmer touchpoints.",
-      whatWeDid: [
-        "Location-aware check-in and validation logic",
-        "Campaign rules and redemption flow design",
-        "Field engagement flows across dealer and farmer journeys"
-      ],
-      outcome: "Improved understanding of market penetration and customer loyalty through better visibility into engagement behavior and redemption patterns.",
-      posterLine: "Geo-aware rewards and loyalty campaign",
-      duration: "4 weeks",
-      tags: ["AgriTech", "Operational Platforms"],
-      deliverables: ["Rewards and loyalty campaign", "QR redemption and validation flows", "Campaign operations tooling"],
-      preview: "linear-gradient(140deg, #101418 0%, #395a74 44%, #b4ed7a 100%)"
+    outcome: "A stronger coaching experience for learners, and real operational visibility for admins.",
+    duration: "6 weeks",
+    media: { shots: 3, tint: "#f1ece4" },
+  },
+  {
+    slug: "bilkool-ezee",
+    chip: "WhatsApp automation",
+    name: "Bilkool Ezee",
+    client: "Bilkool Ezee",
+    category: "operations",
+    kind: "Operations platform",
+    tagline: "Merchandise procurement in one place.",
+    summary:
+      "A procurement platform for branded merchandise that brings quotes, approvals, orders, shipments, invoicing and suppliers into one workflow.",
+    problem:
+      "Every order meant a chain of emails, calls and spreadsheets between clients, approvers and suppliers, and nobody had the full picture.",
+    built: [
+      "Quote, approval and order orchestration",
+      "Shipment visibility and GST-compliant invoicing",
+      "Supplier management with WhatsApp-native coordination",
+      "Receivables ageing and a financial overview",
+    ],
+    highlight: {
+      label: "Automation",
+      text: "Supplier updates flow in over WhatsApp, where suppliers already work, and move orders along without anyone re-typing them.",
     },
-    {
-      slug: "mcp-development",
-      title: "MCP Development",
-      industry: "AI Systems",
-      summary:
-        "Custom MCP servers that connect approved internal data, tools, and actions to ChatGPT, Codex, or internal agent workflows.",
-      detail:
-        "A capability example for teams that want AI assistants to work with internal systems safely. We define the approved data sources, tool permissions, guardrails, and action paths so assistants can query dashboards, generate reports, and execute controlled workflow actions.",
-      whatWeDid: [
-        "Map internal data sources and admin workflows into approved MCP tools",
-        "Add auth, routing, guardrails, and audit logging around tool access",
-        "Connect reporting and safe actions to ChatGPT, Codex, or internal agents"
-      ],
-      outcome:
-        "Teams get a controlled way to use business data in AI workflows without exposing raw systems broadly.",
-      posterLine: "Secure MCP layer for AI-assisted operations",
-      duration: "Scoped by systems and actions",
-      tags: ["AI Systems", "Operational Platforms", "Internal Tools"],
-      deliverables: [
-        "Custom MCP server design and implementation",
-        "Admin dashboard snapshots and usage reporting tools",
-        "Safe action execution with permissions and audit logs"
-      ],
-      preview: "linear-gradient(140deg, #101b15 0%, #294936 45%, #b1e17b 100%)"
-    }
-  ],
-  soulDoc: {
-    repo: "latentship/soul",
-    branch: "main",
-    tabs: [
-      {
-        id: "soul",
-        filename: "soul.md",
-        body: `# soul.md
+    outcome: "Less back-and-forth, and faster quote-to-order.",
+    duration: "8 weeks",
+    media: { shots: 2, tint: "#f6ece9" },
+  },
+  {
+    slug: "deepreflekt",
+    chip: "AI coaching insights",
+    name: "DeepReflekt",
+    client: "DeepReflekt",
+    category: "learning",
+    kind: "Coaching platform",
+    tagline: "Coaching that remembers every reflection.",
+    summary:
+      "A leadership coaching platform built around recurring reflections, coach and leader collaboration, and AI-generated insight.",
+    problem:
+      "Insight from coaching lived in scattered notes. Coaches walked into sessions without the full story of what a leader had been working through.",
+    built: [
+      "Recurring reflection capture and timelines",
+      "Shared workflows between coaches and leaders",
+      "Session notes, action items and progress analytics",
+    ],
+    highlight: {
+      label: "AI inside",
+      text: "AI insights read a leader's reflection patterns and surface what a coach should bring to the next session.",
+    },
+    outcome: "Better continuity across coaching cycles.",
+    duration: "7 weeks",
+    media: { shots: 1, tint: "#ecebf3" },
+  },
+  {
+    slug: "rewards-loyalty-program",
+    chip: "Geo-validated rewards",
+    name: "Rewards & Loyalty",
+    client: "An agri-seeds leader",
+    category: "operations",
+    kind: "Field app + ops",
+    tagline: "Field loyalty for a large agri-seeds business.",
+    summary:
+      "A geo-aware rewards and loyalty program for dealers and farmers, with validated check-ins and controlled QR redemption. Client branding removed.",
+    problem:
+      "Rewards were easy to game and impossible to measure. The business couldn't see which regions were engaging, or whether points were being claimed fairly.",
+    built: [
+      "Dealer onboarding and farmer engagement journeys",
+      "Location-aware check-in and validation",
+      "QR redemption with duplicate and fraud controls",
+      "Campaign operations tooling",
+    ],
+    highlight: {
+      label: "Automation",
+      text: "Geo-validation and signed QR scans stop duplicate or fraudulent claims before they're paid out.",
+    },
+    outcome: "Clear visibility into market penetration and redemption patterns.",
+    duration: "4 weeks",
+    media: { shots: 1, tint: "#e7efe3" },
+  },
+  {
+    slug: "mcp-development",
+    chip: "Secure AI access",
+    name: "Secure MCP layer",
+    client: "Capability",
+    capability: true,
+    category: "infra",
+    kind: "AI integration",
+    tagline: "Give AI assistants safe access to your business.",
+    summary:
+      "Custom MCP servers that connect approved internal data, tools and actions to ChatGPT, Claude, Codex or your own agents, with auth, guardrails and audit logs.",
+    problem:
+      "Teams want AI assistants that know the business, but handing an assistant raw database access is a non-starter.",
+    built: [
+      "Internal data and admin workflows mapped into approved MCP tools",
+      "Auth, routing, guardrails and audit logging around every call",
+      "Reporting and safe actions inside the assistants your team already uses",
+    ],
+    highlight: {
+      label: "AI inside",
+      text: "Assistants query dashboards, generate reports and run controlled actions, without broad access to raw systems.",
+    },
+    outcome: "A controlled way to use business data in AI workflows.",
+    duration: "Scoped by systems and actions",
+    media: { shots: 1, tint: "#eef6e6" },
+  },
+];
+
+export const faq = [
+  {
+    q: "Is the proof of concept free?",
+    a: "Often, yes. We scope it together on the call: if it fits in about a week, it's on us. Bigger proofs get a small fixed fee, agreed before we start. Either way, you're not committing to anything after it.",
+  },
+  {
+    q: "How do milestone payments work?",
+    a: "After the proof, we agree a fixed price for each milestone. A kickoff fee starts the build, and each payment after that is due once a milestone is delivered and you've accepted it. No hourly billing, and no giant check on day one.",
+  },
+  {
+    q: "Who owns the code?",
+    a: "You do, from day one. Everything we build lives in your own code repository (your company's GitHub account, or similar), with documentation on how it all fits together. Keep us on an optional retainer, hand it to your own team, or both.",
+  },
+  {
+    q: "We already have a prototype, or an AI-built app. Can you take it from there?",
+    a: "Yes. We'll review what's there, keep what's solid and harden the rest: security, testing, performance and deployment. A lot of AI-generated code skips all four.",
+  },
+  {
+    q: "Do you sign NDAs?",
+    a: "Yes, happily, before we see anything sensitive.",
+  },
+  {
+    q: "How fast can we start?",
+    a: "We review every intake within 24 to 48 hours. If it's a fit, the proof of concept can start as soon as we have access to the workflow and the data behind it.",
+  },
+];
+
+/* The about page: two files, as we'd keep them in a repo. */
+export const docs = [
+  {
+    id: "soul",
+    file: "soul.md",
+    body: `# soul.md
 
 > Get the AI advantage without becoming an AI company.
 
-LatentShip is an AI-native product and engineering studio. We build agentic workflows, operational platforms, MCP integrations, and launch-ready systems for teams who want to ship faster, smarter, and own what they build.
+LatentShip is a founder-led AI product studio. We build AI products that actually ship: apps, agents, operations platforms and integrations, designed around the way your business already works.
+
+## What we believe
+
+**Proof beats promises.** Every engagement starts with a proof of concept on your real workflow. In about a week you're looking at something that works, not a slide.
+
+**You pay for progress.** A kickoff fee, then milestone by milestone, after you've accepted the work. Never a giant check on day one.
+
+**AI-native, by default.** We build with AI at every step of our own process, and put it to work in your product wherever it makes the work faster, cheaper or better.
+
+**Production or it didn't happen.** Anyone can generate code now. The hard part is security, testing and performance, and we build all three in from the start.
+
+**Your code is yours.** It lives in your own repository from day one. Keep us on retainer, hand it to your team, or both.
 
 ---
 
-## 01 · what you get
+## How we work
 
-The AI-native product (or workflow) your team actually uses.
+\`proof -> build -> launch -> iterate\`
 
-Not a demo. Not a slide. **A working system** that turns the bottleneck you keep losing time on into the thing your team relies on every day.
-
-## 02 · how you know it works
-
-You see it running in 7 days.
-
-Every engagement starts with a 7-day **proof of concept** (POC). By day 7 you hold something real. If the POC misses, we part ways early and you've saved months of the wrong build.
-
-You only pay against **milestones**, never a huge sum upfront, never an ambiguous hourly bill. You see progress, then you pay.
-
-## 03 · how fast
-
-Week 1 proof. Weeks 2 to 8 launch.
-
-\`POC -> MVP -> Launch + Iterate\`. The roadmap is the contract. Weekly demos. Shared decision logs. No black box. No surprise invoice.
-
-## 04 · what you have to do
-
-**Hand us the problem. We handle the rest.**
-
-Source code ownership stays with you from the first commit. No rebuild later.
-
----
-
-## what we ship
-
-- **agentic workflows** - multi-step AI pipelines that do real work, not just demo.
-- **MCP integrations** - secure connectors between your data, your tools, and approved AI assistants.
-- **operational platforms** - internal dashboards and ops tools your team actually lives in.
-- **mobile launches** - React Native deployments when you need a phone app fast.
-- **magic moments** - Teams, WhatsApp, Slack extensions that show up exactly where your customer already is.
-
----
-
-## how we partner
-
-**Your launch date, not ours.** If you're shipping to market, we sync to your launch. If you're rolling out internally, we sync to your team.
-
-**Human judgment, not just AI output.** Anyone can build with AI now. The hard part is *what* to build, *what* to cut, and what order to ship in, plus the three things every pure-AI codebase quietly skips: **security, testing, and performance**. We bake all three into every product. Real product and engineering judgment from people who have shipped production software before, not a freelancer writing prompts and hoping it boots.
-
-**Source code yours from day one.** You own the repo from the first commit. Stay with us on an optional retainer if you want us to keep shipping features and maintaining the system, hand it off to your team, or both. Your call.
-
----
+Weekly demos. A shared decision log. A fixed price per milestone. No black box, no surprise invoice.
 
 ## start_here
 
-One 15-minute scoping call. NDA-friendly. You leave with a clear yes, no, or here is what we would do in week one.
+One 15-minute call. You leave with a clear yes, a clear no, or exactly what we'd build first.
 
-[book a scoping call →](../get-started/)
-
-Response within 1 business day.
-`
-      },
-      {
-        id: "team",
-        filename: "team.md",
-        body: `# team.md
+[Book a scoping call](../get-started/)
+`,
+  },
+  {
+    id: "team",
+    file: "team.md",
+    body: `# team.md
 
 > Founder-led. Specialist-backed.
 
-We're a founder-led team of specialists. Founders lead every build directly, and we scale in trusted contributors across mobile, data, and infrastructure when a project calls for it.
+LatentShip was founded by Hari and Shayaz. Behind every project is a team of vetted specialists across product, AI, mobile, data, infrastructure, design and QA, with one point of contact and a demo every week.
+
+## Founders
+
+::people
+
+## The team
+
+::tags product, AI engineering, mobile, backend, data, devops, design, qa
+
+## Where we've shipped
+
+::tags fintech, learning & coaching, procurement, agritech, AI infrastructure
 
 ---
 
-## founders
+\`proof -> build -> launch -> iterate\`. Weekly demos. Milestone billing. Your code in your repository from day one.
 
-### Hariharan Ragunathan
-
-Product + Engineering · \`hari@latentship.com\`
-
-> I build products by deeply understanding customer problems and translating them into simple, useful, and impactful experiences.
-
-### Shayaz Pithawalla
-
-Engineering + Architecture · \`shayaz@latentship.com\`
-
-> I build AI-forward products focused on creative automation, agentic workflows, and open cloud infrastructure.
-
----
-
-## extended_bench
-
-When a project asks for it, we bring in vetted specialists from our network.
-
-- mobile
-- backend
-- data
-- devops
-- design
-- qa
-
----
-
-## how_we_work
-
-\`POC -> MVP -> Launch + Iterate\`. Weekly demos. Shared decision logs. Milestone-based billing. Source code yours from the first commit.
-
-[book a scoping call →](../get-started/)
-`
-      }
-    ],
-    samples: [
-      { filename: "proof-of-concept.md", note: "sample · what you'll get in week 1" },
-      { filename: "milestones.md", note: "sample · your payment schedule, week by week" },
-      { filename: "decisions.md", note: "sample · the shared decision log we keep with you" }
-    ]
+[Book a scoping call](../get-started/)
+`,
   },
-  leadForm: {
-    endpoint: "https://api.latentship.com",
-    method: "POST",
-    provider: "resend",
-    source: "latentship-site",
-    turnstileSiteKey: "0x4AAAAAADO9Pzc1GtX8YPo3",
-    turnstileAction: "lead_intake_submit"
+];
+
+export const founders = [
+  {
+    name: "Hariharan Ragunathan",
+    initials: "HR",
+    role: "Product + Engineering",
+    email: "hari@latentship.com",
+    quote: "I build products by deeply understanding customer problems and turning them into simple, useful experiences.",
   },
-  faq: [
-    {
-      question: "What do I get first?",
-      bullets: [
-        "A scoped intake and problem framing conversation",
-        "A focused POC plan for the highest-leverage workflow",
-        "A clear recommendation on whether to move into MVP build"
-      ]
-    },
-    {
-      question: "How does pricing work?",
-      bullets: [
-        "POC is fixed scope with explicit success criteria",
-        "MVP is estimated after validation and technical scoping",
-        "Scope changes are documented before implementation"
-      ]
-    },
-    {
-      question: "Do we keep the code and architecture?",
-      bullets: [
-        "Yes. You own the source code and repository",
-        "We provide architecture notes and handoff context",
-        "You can continue with us or with your internal team"
-      ]
-    },
-    {
-      question: "Do you support AI-heavy workflows?",
-      bullets: [
-        "Yes, when AI materially improves the workflow",
-        "We prioritize controllability, diagnostics, and human review points",
-        "We avoid over-automating critical decisions without safeguards"
-      ]
-    },
-    {
-      question: "Do you sign NDAs?",
-      bullets: ["Yes, we can sign NDAs before discovery and scope review."]
-    },
-    {
-      question: "How fast can we start?",
-      bullets: [
-        "Intake responses are typically reviewed within 1 business day",
-        "POC kickoff timing depends on scope clarity and active capacity",
-        "We share a concrete timeline before implementation starts"
-      ]
-    }
-  ]
-}
+  {
+    name: "Shayaz Pithawalla",
+    initials: "SP",
+    role: "Engineering + Architecture",
+    email: "shayaz@latentship.com",
+    quote: "I build AI-forward products: agentic workflows, creative automation and open cloud infrastructure.",
+  },
+];
 
-
+/*
+ * The intake. `send` maps each answer to the value the intake API accepts
+ * (worker/src/index.js); the exact words picked travel in the brief too.
+ */
+export const intake = {
+  need: [
+    {
+      label: "An AI agent for a workflow we already run",
+      sub: "Automate the work your team does by hand today",
+      send: "Build an agent for an existing workflow",
+      placeholder: "e.g. Our ops team reads 200 supplier emails a day and re-types them into our ERP.",
+    },
+    {
+      label: "A new AI-powered product",
+      sub: "Web or mobile, with AI at the core",
+      send: "Build a new AI product or workflow",
+      placeholder: "e.g. An AI coach for new managers that remembers each person's goals.",
+    },
+    {
+      label: "An internal tool or operations platform",
+      sub: "Orders, pricing, approvals, dashboards",
+      send: "Build a new AI product or workflow",
+      placeholder: "e.g. One place for quotes, approvals and invoices instead of five spreadsheets.",
+    },
+    {
+      label: "Help with an existing build",
+      sub: "Architecture, advice or a rescue",
+      send: "Architecture / advisory / rescue",
+      placeholder: "e.g. We have an AI-built prototype that works in demos but breaks with real users.",
+    },
+  ],
+  stage: [
+    { label: "Just an idea" },
+    { label: "A manual process or spreadsheets" },
+    { label: "A prototype or AI-built app" },
+    { label: "A live product" },
+  ],
+  timeline: [
+    { label: "As soon as possible", send: "ASAP" },
+    { label: "In the next 2 to 4 weeks", send: "Within 2-4 weeks" },
+    { label: "In 1 to 2 months", send: "Within 1-2 months" },
+    { label: "Just exploring", send: "Just exploring" },
+  ],
+};
