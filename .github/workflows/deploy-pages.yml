@@ -21,6 +21,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Fingerprint scripts and styles
+        run: python3 scripts/version_assets.py
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
